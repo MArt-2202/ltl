@@ -1,0 +1,11 @@
+@include font-face('UniSans',
+	'UniSans/UniSansRegular/UniSansRegular',
+	400,
+	normal,
+	swap);
+@include font-face('UniSans',
+	'UniSans/UniSansSemiBold/UniSansSemiBold',
+	600,
+	normal,
+	swap);
+@include font-face('UniSans', 'UniSans/UniSansBold/UniSansBold', 700, normal, swap);

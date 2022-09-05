@@ -1,0 +1,11 @@
+.mobile-user-agent {
+
+	.footer__top a,
+	.footer__bottom a[href^="mailto"] {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
