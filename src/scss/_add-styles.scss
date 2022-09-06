@@ -166,6 +166,10 @@
 	overflow: hidden;
 }
 
+.style-4 {
+	padding-top: 112px;
+}
+
 @media (max-width: 1024px) {
 	.style-1 {
 		margin-bottom: 75px;
@@ -174,6 +178,10 @@
 	.style-2 {
 		padding-top: 72px;
 		padding-bottom: 72px;
+	}
+
+	.style-4 {
+		padding-top: 72px;
 	}
 }
 
@@ -241,4 +249,100 @@
 
 .slider-btn--next {
 	right: 0;
+}
+
+.title-1 {
+	margin-bottom: 12px;
+}
+
+.accordion__title,
+.accordion__content {
+	background-color: $c1;
+}
+
+.accordion__title {
+	position: relative;
+	display: block;
+	padding: 22px 65px 20px 30px;
+	font-size: fsz(24, 16);
+	font-weight: 600;
+	line-height: 1.35;
+	cursor: pointer;
+
+	&:not(:first-child) {
+		margin-top: 2px;
+	}
+
+	&:hover {
+		&:after {
+			background-color: $c1;
+		}
+
+		svg {
+			fill: $cb;
+		}
+	}
+
+	&:after,
+	svg {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translate(-50%, -50%);
+		width: 40px;
+		height: 40px;
+		@include trs-all;
+	}
+
+	&:after {
+		content: '';
+		border-radius: 50%;
+		background-color: $c15;
+	}
+
+	svg {
+		z-index: 1;
+		width: 40px;
+		height: 40px;
+		fill: $c1;
+		@include trs-all;
+	}
+
+	&.open svg {
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+}
+
+.accordion__content {
+	display: none;
+	padding: 0 30px 30px 30px;
+	overflow: hidden;
+
+	&.open {
+		display: block;
+	}
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	li {
+		position: relative;
+		padding-left: 10px;
+		line-height: 1.55;
+
+		strong {
+			font-weight: 700;
+		}
+
+		&:before {
+			content: '-';
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-weight: 700;
+		}
+	}
 }
