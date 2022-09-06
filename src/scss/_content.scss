@@ -42,3 +42,138 @@
 		}
 	}
 }
+
+/*
+=================================
+	PRODUCTION SERVICES
+=================================
+*/
+.production-services {
+	h2 {
+		margin-bottom: 8px;
+
+		&~p {
+			margin-bottom: 22px;
+		}
+	}
+}
+
+.production-services__list {
+	padding-top: 30px;
+
+	a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		color: $cb;
+		text-align: center;
+
+		>div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 160px;
+			height: 160px;
+			margin-bottom: 25px;
+
+			div {
+				background-image: url(../img/sprites.png);
+				background-repeat: no-repeat;
+			}
+		}
+
+		&.production-services__list--item-1 {
+			>div {
+				div {
+					width: 157px;
+					height: 150px;
+					background-position: -399px -30px;
+				}
+			}
+		}
+
+		&.production-services__list--item-2 {
+			>div {
+				div {
+					width: 150px;
+					height: 150px;
+					background-position: -604px -26px;
+				}
+			}
+		}
+
+		&.production-services__list--item-3 {
+			>div {
+				div {
+					width: 141px;
+					height: 150px;
+					background-position: -210px -32px;
+				}
+			}
+		}
+
+		&.production-services__list--item-4 {
+			>div {
+				div {
+					width: 150px;
+					height: 79px;
+					background-position: -802px -68px;
+				}
+			}
+		}
+
+		&.production-services__list--item-5 {
+			>div {
+				div {
+					width: 150px;
+					height: 138px;
+					background-position: -1000px -32px;
+				}
+			}
+		}
+
+		&.production-services__list--item-6 {
+			>div {
+				div {
+					width: 150px;
+					height: 147px;
+					background-position: -1183px -32px;
+				}
+			}
+		}
+
+		&.production-services__list--item-7 {
+			>div {
+				div {
+					width: 118px;
+					height: 150px;
+					background-position: -1381px -26px;
+				}
+			}
+		}
+
+		&.production-services__list--item-8 {
+			>div {
+				div {
+					width: 137px;
+					height: 150px;
+					background-position: -25px -24px;
+				}
+			}
+		}
+
+		strong {
+			display: inline-block;
+			font-size: fsz(18, 16);
+			font-weight: 600;
+			line-height: 1.35;
+		}
+
+		&:hover {
+			text-decoration: none;
+			color: $c3;
+		}
+	}
+}
