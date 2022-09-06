@@ -60,7 +60,7 @@ const gulp = require('gulp'),
 			},
 		},
 	},
-	critical = require('critical'),
+	// critical = require('critical'),
 	log = require('fancy-log'),
 	versionNumberConfig = {
 		value: '%TS%',
