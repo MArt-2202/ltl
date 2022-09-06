@@ -35,7 +35,6 @@ footer {
 
 main {
 	flex: 1 0 auto;
-	padding-top: 180px;
 }
 
 picture::selection,
@@ -63,12 +62,6 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 @media (max-width: 1200px) {
 	main {
 		padding-top: 110px;
-	}
-}
-
-@media (max-width: 415px) {
-	main {
-		padding-top: 94px;
 	}
 }
 
@@ -145,7 +138,7 @@ h5 {
 }
 
 h1 {
-	font-size: fsz(42, 16);
+	font-size: fsz(52, 16);
 }
 
 h2 {
@@ -177,7 +170,7 @@ h5 {
 	}
 
 	h1 {
-		font-size: fsz(35, 16);
+		font-size: fsz(42, 16);
 	}
 
 	h2 {
@@ -195,7 +188,7 @@ h5 {
 
 @media (max-width: 768px) {
 	h1 {
-		font-size: fsz(30, 16);
+		font-size: fsz(35, 16);
 	}
 
 	h2 {
