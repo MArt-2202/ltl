@@ -83,7 +83,7 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 }
 
 .container-md {
-	max-width: 900px;
+	max-width: 760px;
 }
 
 @media (max-width: 1230px) {
@@ -100,10 +100,10 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	}
 }
 
-@media (max-width: 930px) {
+@media (max-width: 790px) {
 	.container-md {
-		padding-left: mp(40, 930);
-		padding-right: mp(40, 930);
+		padding-left: mp(40, 790);
+		padding-right: mp(40, 790);
 	}
 }
 
@@ -135,7 +135,7 @@ h4 {
 
 h1,
 h2 {
-	margin-bottom: 55px;
+	margin-bottom: 53px;
 	text-transform: uppercase;
 }
 
@@ -169,7 +169,7 @@ h5 {
 
 	h1,
 	h2 {
-		margin-bottom: 25px;
+		margin-bottom: 33px;
 	}
 
 	h3,
@@ -246,11 +246,11 @@ ol,
 blockquote,
 .video-wrapper,
 .video-wrapper-style-1 {
-	margin-bottom: 25px;
+	margin-bottom: 30px;
 }
 
 p {
-	line-height: 1.5;
+	line-height: 1.55;
 }
 
 a {
@@ -266,62 +266,6 @@ a {
 table {
 	width: 100%;
 	margin-bottom: 40px;
-
-
-	&.table-style-1 {
-		font-size: fsz(20, 16);
-		line-height: 1.25;
-		letter-spacing: 0.15px;
-		text-align: center;
-
-		th,
-		td {
-			padding: 10px 15px;
-			font-weight: 700;
-			vertical-align: middle;
-			border: 1px solid $c23;
-
-			&:first-child {
-				text-align: left;
-			}
-		}
-
-		svg {
-			width: 30px;
-			height: 30px;
-		}
-	}
-}
-
-@media (max-width: 576px) {
-	table {
-		&.table-style-1 {
-			font-size: 1rem;
-
-			th,
-			td {
-				padding: 10px 15px;
-			}
-
-			svg {
-				width: 20px;
-				height: 20px;
-			}
-		}
-	}
-}
-
-@media (max-width: 320px) {
-	table {
-		&.table-style-1 {
-			font-size: fsz(12, 14);
-
-			th,
-			td {
-				padding: 7px 10px;
-			}
-		}
-	}
 }
 
 picture,
@@ -417,55 +361,6 @@ video {
 	iframe:not([id^='telegram']),
 	video {
 		max-width: 100%;
-	}
-}
-
-.navigation {
-	margin-top: 40px;
-}
-
-.nav-links {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 10px 0;
-
-	a,
-	span {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: 45px;
-		height: 45px;
-		font-size: fsz(18, 16);
-		font-weight: 500;
-	}
-
-	span {
-		color: $c3;
-		background: rgba($c3, 0.15);
-	}
-
-	a {
-		color: $cb;
-
-		&:hover {
-			text-decoration: none;
-			color: $c3;
-		}
-	}
-}
-
-@media (max-width: 576px) {
-	.nav-links {
-
-		a,
-		span {
-			width: 40px;
-			height: 40px;
-			font-size: 1rem;
-		}
 	}
 }
 
@@ -601,189 +496,6 @@ video {
 		a {
 			&:after {
 				top: 3px;
-			}
-		}
-	}
-}
-
-.logo-prantmedia {
-	display: inline-block;
-
-	&:hover {
-		text-decoration: none;
-	}
-}
-
-.social {
-	margin-bottom: 0;
-
-	li,
-	a,
-	svg {
-		display: inline-block;
-	}
-
-	a {
-		color: $cb;
-
-		&:hover {
-			text-decoration: none;
-		}
-	}
-
-	svg {
-		fill: currentColor;
-		@include trs-all;
-	}
-
-	&.social-style-1 a {
-		color: $c2;
-	}
-
-	&.social-style-2 {
-		.social__twitter {
-			width: 17px;
-			height: 14px;
-
-			&:hover {
-				color: $c9;
-			}
-		}
-
-		.social__instagram {
-			width: 15px;
-			height: 15px;
-
-			&:hover {
-				color: $c12;
-			}
-		}
-
-		.social__telegram {
-			width: 16px;
-			height: 13px;
-
-			&:hover {
-				color: $c10;
-			}
-		}
-
-		.social__whatsapp {
-			width: 15px;
-			height: 15px;
-
-			&:hover {
-				color: $c21;
-			}
-		}
-
-		.social__linkedin {
-			width: 16px;
-			height: 15px;
-
-			&:hover {
-				color: $c11;
-			}
-		}
-
-		.social__youtube {
-			width: 17px;
-			height: 12px;
-
-			&:hover {
-				color: $c8;
-			}
-		}
-
-		.social__facebook {
-			width: 8px;
-			height: 15px;
-
-			&:hover {
-				color: $c13;
-			}
-		}
-	}
-
-	&.social-style-3 {
-		li {
-			margin-right: 16px;
-
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-
-		.social__twitter,
-		.social__instagram,
-		.social__whatsapp,
-		.social__telegram,
-		.social__linkedin,
-		.social__youtube,
-		.social__facebook {
-			color: $c1;
-		}
-
-		.social__twitter {
-			width: 30px;
-			height: 25px;
-
-			&:hover {
-				color: $c9;
-			}
-		}
-
-		.social__instagram {
-			width: 25px;
-			height: 25px;
-
-			&:hover {
-				color: $c12;
-			}
-		}
-
-		.social__telegram {
-			width: 30px;
-			height: 25px;
-
-			&:hover {
-				color: $c10;
-			}
-		}
-
-		.social__whatsapp {
-			width: 25px;
-			height: 25px;
-
-			&:hover {
-				color: $c21;
-			}
-		}
-
-		.social__linkedin {
-			width: 26px;
-			height: 25px;
-
-			&:hover {
-				color: $c11;
-			}
-		}
-
-		.social__youtube {
-			width: 35px;
-			height: 25px;
-
-			&:hover {
-				color: $c8;
-			}
-		}
-
-		.social__facebook {
-			width: 13px;
-			height: 25px;
-
-			&:hover {
-				color: $c13;
 			}
 		}
 	}
