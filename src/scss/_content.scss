@@ -238,3 +238,42 @@
 		}
 	}
 }
+
+/*
+=================================
+	REVIEWS
+=================================
+*/
+.reviews__slider-item {
+	padding-bottom: 55px;
+	text-align: center;
+
+	p {
+		margin-bottom: 35px;
+		font: fsz(14, 16)/1.55 $f1;
+
+		a {
+			color: $c14;
+		}
+	}
+
+	strong {
+		display: block;
+		margin-top: 12px;
+		margin-bottom: 8px;
+		font-weight: 600;
+		line-height: 1.2;
+
+		&+p {
+			margin-bottom: 0;
+			font-family: $fb;
+		}
+	}
+}
+
+.reviews__slider-img {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
