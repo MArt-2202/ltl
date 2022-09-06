@@ -9,3 +9,26 @@
 		}
 	}
 }
+
+footer {
+	color: $c1;
+	background-color: $c2;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 20px;
+
+		div {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.copyright {
+	display: inline-block;
+	font-size: fsz(14, 16);
+	font-weight: 600;
+	line-height: 1;
+}
