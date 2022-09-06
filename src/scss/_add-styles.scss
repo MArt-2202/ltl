@@ -84,3 +84,64 @@
 		@include trs-all;
 	}
 }
+
+.back-to-top {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	color: $c2;
+	background-color: $c1;
+	border-radius: 50%;
+	cursor: pointer;
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 20px;
+		height: 20px;
+		fill: currentColor;
+		@include trs-all;
+	}
+}
+
+.social {
+
+	li,
+	a {
+		display: inline-block;
+	}
+
+	a {
+		position: relative;
+		width: 30px;
+		height: 30px;
+		color: $c1;
+		border-radius: 50%;
+
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 30px;
+			height: 30px;
+			fill: currentColor;
+			@include trs-all;
+		}
+
+		&:hover {
+			text-decoration: none;
+
+			.social__facebook {
+				fill: $c6;
+			}
+
+			.social__instagram {
+				fill: $c7;
+			}
+		}
+	}
+}
