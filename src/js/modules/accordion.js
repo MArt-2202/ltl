@@ -33,18 +33,19 @@ export default function accordion() {
 							animate.addEventListener('finish', function () {
 								answer.removeAttribute('style');
 							});
-						} else {
-							item.nextElementSibling.style.height =
-								item.nextElementSibling.clientHeight + 'px';
-							const animate = item.nextElementSibling.animate([{ height: 0 }], {
-								duration: 100,
-							});
-							animate.addEventListener('finish', function () {
-								item.classList.remove('open');
-								item.nextElementSibling.removeAttribute('style');
-								item.nextElementSibling.classList.remove('open');
-							});
 						}
+						// else {
+						// 	item.nextElementSibling.style.height =
+						// 		item.nextElementSibling.clientHeight + 'px';
+						// 	const animate = item.nextElementSibling.animate([{ height: 0 }], {
+						// 		duration: 100,
+						// 	});
+						// 	animate.addEventListener('finish', function () {
+						// 		item.classList.remove('open');
+						// 		item.nextElementSibling.removeAttribute('style');
+						// 		item.nextElementSibling.classList.remove('open');
+						// 	});
+						// }
 					});
 				}
 			}
