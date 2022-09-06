@@ -25,3 +25,20 @@
 		justify-content: center;
 	}
 }
+
+/*
+=================================
+	ABOUT
+=================================
+*/
+.about {
+	background-color: $c9;
+
+	p {
+		font-size: fsz(20, 16);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
