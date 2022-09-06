@@ -1,5 +1,66 @@
 /*
 =================================
+	TOP SECTION
+=================================
+*/
+.top-section {
+	position: relative;
+	overflow: hidden;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: calc(100vh - 80px);
+	}
+
+	video {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: -moz-linear-gradient(top, rgba($cb, 0.5) 0%, rgba($cb, 0.6) 100%);
+		background: -webkit-linear-gradient(top, rgba($cb, 0.5) 0%, rgba($cb, 0.6) 100%);
+		background: linear-gradient(to bottom, rgba($cb, 0.5) 0%, rgba($cb, 0.6) 100%);
+	}
+}
+
+.top-section__content {
+	position: relative;
+	z-index: 1;
+	color: $c1;
+
+	h1 {
+		margin-bottom: 38px;
+		letter-spacing: 1px;
+	}
+
+	p {
+		max-width: 640px;
+		font-size: fsz(22, 16);
+		color: $c10;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/*
+=================================
 	CLIENTS
 =================================
 */
