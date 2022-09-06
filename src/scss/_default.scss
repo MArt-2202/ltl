@@ -143,6 +143,11 @@ h1 {
 
 h2 {
 	font-size: fsz(28, 16);
+
+	&+span {
+		display: inline-block;
+		line-height: 1.2;
+	}
 }
 
 h3 {
