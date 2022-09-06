@@ -114,6 +114,12 @@
 		display: inline-block;
 	}
 
+	li {
+		&:not(:last-child) {
+			margin-right: 2px;
+		}
+	}
+
 	a {
 		position: relative;
 		width: 30px;
@@ -150,8 +156,18 @@
 	margin-bottom: 115px;
 }
 
+.style-2 {
+	padding-top: 112px;
+	padding-bottom: 112px;
+}
+
 @media (max-width: 1024px) {
 	.style-1 {
 		margin-bottom: 75px;
+	}
+
+	.style-2 {
+		padding-top: 72px;
+		padding-bottom: 72px;
 	}
 }
