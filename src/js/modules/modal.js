@@ -1,6 +1,57 @@
 export default function modal() {
+	const images = [];
+	let itemIndex = 0;
+
+	if (document.querySelector('.awards__list .list-img')) {
+		document.querySelectorAll('.awards__list .list-img').forEach((el) => {
+			const temImgWebp = el.dataset.imgWebp,
+				itemImg = el.dataset.img;
+
+			images.push({
+				webp: temImgWebp,
+				img: itemImg,
+			});
+		});
+	}
+
+	if (
+		document.querySelector('#lightbox-btn--prev') &&
+		document.querySelector('#lightbox-btn--next') &&
+		document.querySelector('[data-modal="modal-1"]') &&
+		document.querySelector('.awards__list')
+	) {
+		const prevBtn = document.querySelector('#lightbox-btn--prev'),
+			nextBtn = document.querySelector('#lightbox-btn--next'),
+			targetModal = document.querySelector('[data-modal="modal-1"]'),
+			list = document.querySelector('.awards__list');
+
+		prevBtn.addEventListener('click', () => {
+			if (itemIndex > 0) {
+				--itemIndex;
+			} else {
+				itemIndex = list?.children.length - 1;
+			}
+			targetModal
+				.querySelector('picture source')
+				.setAttribute('srcset', images.at(itemIndex)?.webp);
+			targetModal.querySelector('picture img').setAttribute('src', images.at(itemIndex)?.img);
+		});
+
+		nextBtn.addEventListener('click', () => {
+			if (itemIndex < list?.children.length - 1) {
+				++itemIndex;
+			} else {
+				itemIndex = 0;
+			}
+			targetModal
+				.querySelector('picture source')
+				.setAttribute('srcset', images.at(itemIndex)?.webp);
+			targetModal.querySelector('picture img').setAttribute('src', images.at(itemIndex)?.img);
+		});
+	}
+
 	if (document.querySelector('.modal-btn')) {
-		document.querySelectorAll('.modal-btn').forEach((el) => {
+		document.querySelectorAll('.modal-btn').forEach((el, index) => {
 			el.addEventListener('click', function (e) {
 				e.preventDefault();
 				if (el.dataset.modalBtn !== '') {
@@ -14,6 +65,27 @@ export default function modal() {
 					document.body.style.paddingRight =
 						window.innerWidth - document.documentElement.clientWidth + 'px';
 					document.body.style.overflowY = 'hidden';
+
+					if (
+						el.dataset.modalBtn === 'modal-1' &&
+						el.dataset.imgWebp !== '' &&
+						el.dataset.img !== '' &&
+						targetModal.querySelector('picture')
+					) {
+						const itemImgWebp = el.dataset.imgWebp,
+							itemImg = el.dataset.img,
+							img = targetModal.querySelector('picture');
+
+						itemIndex = index;
+
+						if (img.querySelector('source')) {
+							img.querySelector('source').setAttribute('srcset', itemImgWebp);
+						}
+
+						if (img.querySelector('img')) {
+							img.querySelector('img').setAttribute('src', itemImg);
+						}
+					}
 				}
 			});
 		});
