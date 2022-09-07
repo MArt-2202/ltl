@@ -1,13 +1,25 @@
 <div class="dn modal-overlay" data-modal="modal-1">
 	<div class="modal">
-		<div class="modal__content">
+		<div class="modal__content modal__content-style-1">
 			<button class="modal__close">
 				<svg>
 					<use href="img/sprite-svg-fill-delete.svg#close"></use>
 				</svg>
 			</button>
-			<section>
-			</section>
+			<picture>
+				<source srcset="img/loader.gif" type="image/webp">
+				<img src="img/loader.gif" alt="" loading="lazy">
+			</picture>
+			<button class="lightbox-btn lightbox-btn--prev" id="lightbox-btn--prev">
+				<svg>
+					<use href="img/sprite-svg-fill-delete.svg#arrow-left"></use>
+				</svg>
+			</button>
+			<button class="lightbox-btn lightbox-btn--next" id="lightbox-btn--next">
+				<svg>
+					<use href="img/sprite-svg-fill-delete.svg#arrow-right"></use>
+				</svg>
+			</button>
 		</div>
 	</div>
 </div>
