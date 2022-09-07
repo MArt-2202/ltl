@@ -355,3 +355,29 @@
 		}
 	}
 }
+
+.btn {
+	display: inline-block;
+	padding: 11px 10px 9px 10px;
+	font-weight: 700;
+	line-height: 1;
+	border-radius: 4px;
+	border: 1px solid transparent;
+	cursor: pointer;
+	text-align: center;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.btn-default {
+	color: $c1;
+	border-color: $cb;
+	background-color: $cb;
+
+	&:hover {
+		border-color: $c15;
+		background-color: $c15;
+	}
+}
