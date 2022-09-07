@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('resize', () => {
 	debounce(function () {
-		blocksStyles();
 		blockPosition();
 	}, 200);
 });
