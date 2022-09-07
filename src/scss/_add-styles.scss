@@ -215,7 +215,8 @@
 	}
 }
 
-.slider-btn {
+.slider-btn,
+.lightbox-btn {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -249,6 +250,14 @@
 
 .slider-btn--next {
 	right: 0;
+}
+
+.lightbox-btn--prev {
+	left: 15px;
+}
+
+.lightbox-btn--next {
+	right: 15px;
 }
 
 .title-1 {
