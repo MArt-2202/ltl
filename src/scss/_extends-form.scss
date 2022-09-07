@@ -8,41 +8,45 @@
 	textarea,
 	input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']) {
 		width: 100%;
-		padding-left: 18px;
-		padding-right: 18px;
-		border-bottom: 1px solid rgba(48, 48, 48, 0.2);
-		-webkit-transition: all 0.3s ease-in-out;
-		transition: all 0.3s ease-in-out;
+		padding-left: 20px;
+		padding-right: 20px;
+		border: 1px solid $c17;
+		border-radius: 4px;
+		@include trs-all;
 
 		&:focus {
-			border-bottom-color: $cb;
+			border-color: $c15;
 			outline: none;
 		}
+	}
 
-		&.required {
-			border-bottom-color: $c3;
+	.form__icon {
+		input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']) {
+			padding-left: 65px;
+			padding-right: 65px;
 		}
 	}
 
 	textarea {
-		height: 150px;
-		min-height: 150px;
+		height: 100px;
+		min-height: 100px;
 		padding-top: 16px;
 		padding-bottom: 16px;
 		resize: vertical;
 		line-height: 1.25;
-		background-color: $c4;
 	}
 
 	input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']),
-	select {
+	select,
+	.form__submit {
 		width: 100%;
-		height: 50px;
+		height: 60px;
 	}
 
-	.input-wrapper {
-		height: 47px;
-		border: 1px solid $c7;
+	.form__submit {
+		padding-top: 0;
+		padding-bottom: 0;
+		line-height: 60px;
 	}
 
 	input[type='file'] {
