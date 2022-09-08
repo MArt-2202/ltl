@@ -286,6 +286,10 @@
 .partners-services {
 	background-color: $c9;
 
+	.btn+h2 {
+		margin-top: 60px;
+	}
+
 	h2+p+.accordion {
 		margin-top: 55px;
 	}
