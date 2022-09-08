@@ -381,3 +381,14 @@
 		background-color: $c15;
 	}
 }
+
+.btn-danger {
+	color: $c1;
+	border-color: $c22;
+	background-color: $c22;
+
+	&:hover {
+		border-color: $c23;
+		background-color: $c23;
+	}
+}
