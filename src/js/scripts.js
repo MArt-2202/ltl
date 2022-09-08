@@ -9,6 +9,7 @@ import blockPosition from './modules/blockPosition';
 import modal from './modules/modal';
 import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
+import masketInput from './modules/masketInput';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	modal();
 	tableWrapper();
 	toggleContent();
+	masketInput();
 }); // END READY
 
 window.addEventListener('resize', () => {
