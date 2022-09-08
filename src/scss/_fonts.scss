@@ -4,6 +4,11 @@
 	normal,
 	swap);
 @include font-face('UniSans',
+	'UniSans/UniSansMedium/UniSansMedium',
+	500,
+	normal,
+	swap);
+@include font-face('UniSans',
 	'UniSans/UniSansSemiBold/UniSansSemiBold',
 	600,
 	normal,
