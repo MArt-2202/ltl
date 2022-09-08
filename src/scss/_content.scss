@@ -310,3 +310,16 @@
 		cursor: zoom-in;
 	}
 }
+
+/*
+=================================
+	ORDER
+=================================
+*/
+.order {
+	background-color: $c9;
+
+	p+.order-form {
+		margin-top: 53px;
+	}
+}
