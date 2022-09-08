@@ -144,7 +144,6 @@ textarea {
 
 label {
 	display: block;
-	text-align: right;
 }
 
 .form {
@@ -279,6 +278,47 @@ label {
 
 		&:last-child {
 			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.search-form__list {
+		h4 {
+			font-size: fsz(18, 16);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.search-form__list {
+		h4 {
+			font-size: 1rem;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.search-form__list {
+		p {
+			font-size: fsz(12, 14);
+		}
+	}
+}
+
+.order-form {
+	padding: 30px 30px 19px 30px;
+	background-color: $c1;
+	box-shadow: 0 4px 18px 0 rgba($cb, 0.3);
+	border-bottom: 5px solid $c22;
+
+	&+p {
+		margin-top: 25px;
+		margin-bottom: 0;
+		text-align: center;
+
+		a {
+			color: $c16;
 		}
 	}
 }
