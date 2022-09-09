@@ -21,4 +21,31 @@ export default function sliders() {
 			},
 		});
 	}
+
+	if (document.querySelector('.confidence__slider')) {
+		new Swiper('.confidence__slider', {
+			on: {
+				init() {
+					if (document.querySelector('.confidence__slider-wrapper')) {
+						document.querySelector('.confidence__slider-wrapper').classList.remove('style-3');
+					}
+				},
+			},
+			loop: true,
+			slidesPerView: 6,
+			spaceBetween: 40,
+			forceToAxis: true,
+			navigation: {
+				nextEl: '.confidence__slider-wrapper .slider-btn--next',
+				prevEl: '.confidence__slider-wrapper .slider-btn--prev',
+			},
+			breakpoints: {
+				1230: { slidesPerView: 6, spaceBetween: 40 },
+				1024: { slidesPerView: 4, spaceBetween: 40 },
+				768: { slidesPerView: 3, spaceBetween: 30 },
+				576: { slidesPerView: 2, spaceBetween: 20 },
+				300: { slidesPerView: 1, spaceBetween: 15 },
+			},
+		});
+	}
 }
