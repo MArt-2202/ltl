@@ -328,6 +328,20 @@ b {
 	}
 }
 
+.map-wrapper {
+	position: relative;
+	overflow: hidden;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		min-width: 100%;
+		border: none;
+	}
+}
+
 iframe:not(.instagram-media),
 iframe:not(.facebook),
 iframe:not([id^='telegram']),
