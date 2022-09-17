@@ -1,0 +1,156 @@
+.contacts {
+	h1 {
+		position: relative;
+		margin-bottom: 70px;
+		padding: 117px 40px 114px 40px;
+		font: 600 fsz(72, 16)/1.2 $f1;
+		letter-spacing: 0.5px;
+		color: $c1;
+		text-align: center;
+		text-transform: uppercase;
+		background: url(../img/bg-1.jpg) no-repeat 50% 50%;
+		background-size: cover;
+
+		span {
+			position: relative;
+			z-index: 1;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($cb, 0.3);
+		}
+	}
+
+	h2 {
+		margin-bottom: 32px;
+		line-height: 1.15;
+	}
+
+	h3 {
+		margin-bottom: 33px;
+		font-weight: 400;
+		text-decoration: underline;
+		text-align: center;
+	}
+
+	.map-wrapper {
+		box-shadow: 0px 0px 20px 0px rgba($cb, 0.1);
+	}
+}
+
+.contacts__content {
+	font: fsz(20, 16) $f1;
+}
+
+.contacts__aside {
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.contacts__list {
+	margin-bottom: 60px;
+	font-size: fsz(20, 16);
+
+	p,
+	a[href^="tel"] {
+		color: rgba($cb, 0.7);
+	}
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	strong,
+	span {
+		display: block;
+	}
+
+	strong {
+		margin-bottom: 9px;
+		font-weight: 600;
+		line-height: 1.4;
+		color: $cb;
+
+		&~a[href^="tel"],
+		&~span {
+			font-weight: 700;
+		}
+	}
+
+	a[href^="tel"] {
+		display: table;
+
+		&:hover {
+			text-decoration: none;
+			color: $c3;
+		}
+	}
+}
+
+.contacts__map-wrapper-1 {
+	height: 550px;
+}
+
+.contacts__map-wrapper-2 {
+	width: calc(min(640px, 100%));
+	height: 480px;
+	margin: 0 auto 75px auto;
+}
+
+.contacts__add {
+	font: fsz(26, 16) $f1;
+	text-align: center;
+
+	p {
+		margin-bottom: 35px;
+
+		&+.social {
+			padding-top: 10px;
+		}
+	}
+
+	.social {
+		li {
+			margin-right: 0;
+		}
+
+		a {
+			width: 48px;
+			height: 48px;
+			color: $cb;
+
+			svg {
+				width: 48px;
+				height: 48px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+	.contacts__content {
+		display: flex;
+		align-items: center;
+		gap: 40px mp(40, 1200);
+	}
+
+	.contacts__aside {
+		width: 360px;
+		flex: none;
+	}
+
+	.contacts__main {
+		flex-grow: 1;
+	}
+}
