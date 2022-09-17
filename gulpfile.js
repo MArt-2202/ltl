@@ -476,6 +476,16 @@ const copyFavicon = async () => {
 
 exports.copyFavicon = copyFavicon;
 
+// COPY JSON
+const copyJSON = async () => {
+	return src(dirs.source + '/data/*.json')
+		.pipe($.newer(`${dirs.build}/data`))
+		.pipe($.plumber())
+		.pipe(dest(`${dirs.build}/data`));
+};
+
+exports.copyJSON = copyJSON;
+
 // COPY FONTS
 const copyFonts = async () => {
 	return src(`${dirs.source}/fonts/**/*.{eot,svg,ttf,woff,woff2}`)
@@ -508,11 +518,12 @@ const watchChanges = async () => {
 	watch(`${dirs.source}/img/*.{gif,png,jpg,jpeg,svg,webp}`, copyImg);
 	watch(`${dirs.source}/img/*.{png,jpg,jpeg}`, webpImg);
 	watch(`${dirs.source}/img/flags/*.svg`, svgImg);
-	// watch(`${dirs.source}/svg/*.svg`, svgSprite);
+	watch(`${dirs.source}/svg/*.svg`, svgSprite);
 	watch(`${dirs.source}/svg/*.svg`, svgSpriteFillDelete);
 	watch(`${dirs.source}/video/*.{mp4,jpg}`, copyVideo);
 	// watch(`${dirs.source}/js/partials/*.{js, min.js}`, copyAddJSFiles);
 	watch(`${dirs.source}/plugins/**/*.js`, plugins);
+	watch(`${dirs.source}/data/**/*.json`, copyJSON);
 
 	// * или
 	// watch(`${dirs.source}/scss/**/*.scss`).on('change', browserSync.reload);
@@ -530,13 +541,14 @@ exports.default = series(
 		copyImg,
 		webpImg,
 		svgImg,
-		// svgSprite,
+		svgSprite,
 		svgSpriteFillDelete,
 		copyVideo,
 		copyFavicon,
 		// copyAddJSFiles,
 		script,
-		plugins
+		plugins,
+		copyJSON
 	),
 	// criticalCss,
 	watchChanges
