@@ -11,6 +11,7 @@ import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
 import masketInput from './modules/masketInput';
 import scrollToAnchor from './modules/scrollToAnchor';
+import mapIntersectionObserver from './modules/mapIntersectionObserver';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	toggleContent();
 	masketInput();
 	scrollToAnchor();
+	mapIntersectionObserver('#map-with-pins');
 }); // END READY
 
 window.addEventListener('resize', () => {
