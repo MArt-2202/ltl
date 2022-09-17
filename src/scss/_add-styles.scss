@@ -145,6 +145,10 @@
 				fill: $c6;
 			}
 
+			.social__youtube {
+				fill: $c15;
+			}
+
 			.social__instagram {
 				fill: $c7;
 			}
@@ -414,4 +418,19 @@
 	font-weight: 500;
 	line-height: 60px;
 	border-radius: 10px;
+}
+
+.gm-style-iw-d {
+	p {
+		margin-bottom: 15px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	a[href^="tel"] {
+		display: table;
+		max-width: 100%;
+	}
 }
