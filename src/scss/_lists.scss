@@ -1,6 +1,8 @@
 .list-1,
 .list-2,
-.list-3 {
+.list-3,
+.list-4,
+.list-5 {
 	display: grid;
 }
 
@@ -9,11 +11,24 @@
 	grid-template-columns: repeat(6, 1fr);
 }
 
-.list-2 {
+.list-2,
+.list-5 {
 	grid-template-columns: repeat(4, 1fr);
+}
+
+.list-2 {
 	gap: 70px 20px;
 }
 
 .list-3 {
 	grid-column-gap: 20px;
+}
+
+.list-4,
+.list-5 {
+	gap: 40px;
+}
+
+.list-4 {
+	grid-template-columns: repeat(3, 1fr);
 }
