@@ -397,6 +397,16 @@
 	}
 }
 
+.btn-error {
+	color: $c1;
+	border-color: $c14;
+	background-color: $c14;
+
+	&:hover {
+		background-color: $c31;
+	}
+}
+
 .btn-info {
 	color: $c1;
 	border-color: $c15;
@@ -417,6 +427,22 @@
 	font-size: fsz(22, 16);
 	line-height: 60px;
 	border-radius: 10px;
+}
+
+.btn-style-2 {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.btn-style-3 {
+	padding-top: 21px;
+	padding-bottom: 21px;
+	border-radius: 60px;
+}
+
+.btn-style-4 {
+	min-width: 240px;
 }
 
 .gm-style-iw-d {
