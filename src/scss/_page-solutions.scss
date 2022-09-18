@@ -13,8 +13,6 @@
 }
 
 .solutions__list {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
 
 	a,
 	strong {
@@ -98,6 +96,8 @@
 }
 
 .solutions__list-style-2 {
+	margin-bottom: 60px;
+
 	a {
 		color: $c27;
 
@@ -144,5 +144,9 @@
 	.solutions__process {
 		padding-top: 73px;
 		padding-bottom: 80px;
+	}
+
+	.solutions__list-style-2 {
+		margin-bottom: 20px;
 	}
 }
