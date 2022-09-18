@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+//=include('templates/head.html')
+
+<body itemscope itemtype="http://schema.org/WebPage">
+	//=include('templates/schemaOrgInfo.html')
+	//=include('templates/header.html')
+	<main>
+		<section class="products">
+			//=include('html_modules/_top-section_products.html')
+		</section>
+		<!-- CONTAINER -->
+		<div class="container-md">
+			//=include('html_modules/_products-why.html')
+		</div><!-- END CONTAINER -->
+		//=include('html_modules/_products-catalog.html')
+		<!-- CONTAINER -->
+		<div class="container">
+			//=include('html_modules/_products-categories.html')
+			//=include('html_modules/_confidence.html')
+		</div><!-- END CONTAINER -->
+		<!-- CONTAINER -->
+		<div class="container-md">
+			//=include('html_modules/_reviews.html')
+		</div><!-- END CONTAINER -->
+		<section class="style-2 order" id="order">
+			<!-- CONTAINER -->
+			<div class="container-md">
+				<h2>Чи готові поліпшити рентабельність і продуктивність своєї ділянки?</h2>
+				<p>Напишіть нам в онлайн-чаті або заповніть анкету нижче.<br>
+					Наш фахівець зв'яжеться з вами, відповість на всі питання, розповість докладніше про процес і домовиться
+					на зустріч.
+				</p>
+				//=include('html_modules/_order-form.html')
+			</div><!-- END CONTAINER -->
+		</section>
+	</main>
+	//=include('templates/footer.html')
+	//=include('html_modules/_modal.html')
+	//=include('templates/afterFooterContent.html')
+</body>
+
+</html>
