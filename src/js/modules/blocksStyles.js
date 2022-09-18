@@ -68,4 +68,30 @@ export default function blockStyles() {
 		);
 		document.querySelectorAll('.lazyload-map').forEach((item) => observer.observe(item));
 	}
+
+	if (document.querySelector('#video-list .video-wrapper')) {
+		const observer = new IntersectionObserver(
+			(entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting && entry.target.dataset.video) {
+						entry.target.insertAdjacentHTML(
+							'beforeend',
+							`
+							<iframe src="${entry.target.dataset.video}" title="YouTube video player"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
+								`
+						);
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				rootMargin: '50px',
+			}
+		);
+		document
+			.querySelectorAll('#video-list .video-wrapper')
+			.forEach((item) => observer.observe(item));
+	}
 }
