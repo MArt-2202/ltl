@@ -2,8 +2,8 @@ export default function modal() {
 	const images = [];
 	let itemIndex = 0;
 
-	if (document.querySelector('.awards__list .list-img')) {
-		document.querySelectorAll('.awards__list .list-img').forEach((el) => {
+	if (document.querySelector('#lightbox-list .list-img')) {
+		document.querySelectorAll('#lightbox-list .list-img').forEach((el) => {
 			const temImgWebp = el.dataset.imgWebp,
 				itemImg = el.dataset.img;
 
@@ -18,12 +18,12 @@ export default function modal() {
 		document.querySelector('#lightbox-btn--prev') &&
 		document.querySelector('#lightbox-btn--next') &&
 		document.querySelector('[data-modal="modal-1"]') &&
-		document.querySelector('.awards__list')
+		document.querySelector('#lightbox-list')
 	) {
 		const prevBtn = document.querySelector('#lightbox-btn--prev'),
 			nextBtn = document.querySelector('#lightbox-btn--next'),
 			targetModal = document.querySelector('[data-modal="modal-1"]'),
-			list = document.querySelector('.awards__list');
+			list = document.querySelector('#lightbox-list');
 
 		prevBtn.addEventListener('click', () => {
 			if (itemIndex > 0) {
