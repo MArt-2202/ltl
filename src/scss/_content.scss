@@ -286,18 +286,18 @@
 .partners-services {
 	background-color: $c9;
 
-	.btn+h2 {
+	.btn+h3 {
 		margin-top: 60px;
 	}
 
-	h2+p+.accordion {
+	h3+p+.accordion {
 		margin-top: 55px;
 	}
 }
 
 @media (max-width: 1024px) {
 	.partners-services {
-		h2+p+.accordion {
+		h3+p+.accordion {
 			margin-top: 35px;
 		}
 	}
