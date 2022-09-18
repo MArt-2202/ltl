@@ -323,6 +323,10 @@
 .order {
 	background-color: $c9;
 
+	h3 {
+		margin-bottom: 20px;
+	}
+
 	p+.order-form {
 		margin-top: 53px;
 	}
