@@ -369,6 +369,7 @@
 	border: 1px solid transparent;
 	cursor: pointer;
 	text-align: center;
+	@include trs-all;
 
 	&:hover {
 		text-decoration: none;
@@ -417,6 +418,17 @@
 	}
 }
 
+.btn-info-2 {
+	color: $cb;
+	border-color: $c35;
+	background-color: $c35;
+
+	&:hover {
+		border-color: $c36;
+		background-color: $c36;
+	}
+}
+
 .btn-style-1 {
 	display: table;
 	margin-left: auto;
@@ -443,6 +455,17 @@
 
 .btn-style-4 {
 	min-width: 240px;
+}
+
+.btn-style-5 {
+	padding-top: 13px;
+	padding-bottom: 11px;
+}
+
+.btn-style-6 {
+	padding-top: 21px;
+	padding-bottom: 21px;
+	border-radius: 100px;
 }
 
 .gm-style-iw-d {
