@@ -34,18 +34,36 @@ export default function mapWithPins(node) {
 					infoWindow.setContent(marker.content);
 					infoWindow.open(map, marker);
 				};
-				for (let i = 0; i < locationData.length; i++) {
+
+				if (
+					document.querySelector('.school-contacts') &&
+					document.querySelector(node).closest('.school-contacts')
+				) {
 					const marker = new google.maps.Marker({
 						map: map,
-						title: `${locationData[i].title}`,
-						content: `${locationData[i]?.description}`,
+						title: `${locationData.at(0).title}`,
+						content: `${locationData.at(0)?.description}`,
 						position: new google.maps.LatLng(
-							+locationData.at(i)?.lat,
-							+locationData.at(i)?.lng
+							+locationData.at(0)?.lat,
+							+locationData.at(0)?.lng
 						),
 						icon: pinIcon,
 					});
 					google.maps.event.addListener(marker, 'click', onMarkerClick);
+				} else {
+					for (let i = 0; i < locationData.length; i++) {
+						const marker = new google.maps.Marker({
+							map: map,
+							title: `${locationData.at(i).title}`,
+							content: `${locationData.at(i)?.description}`,
+							position: new google.maps.LatLng(
+								+locationData.at(i)?.lat,
+								+locationData.at(i)?.lng
+							),
+							icon: pinIcon,
+						});
+						google.maps.event.addListener(marker, 'click', onMarkerClick);
+					}
 				}
 			})
 			.catch((error) => {
