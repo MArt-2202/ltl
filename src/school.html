@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+//=include('templates/head.html')
+
+<body itemscope itemtype="http://schema.org/WebPage">
+	//=include('templates/schemaOrgInfo.html')
+	//=include('templates/header.html')
+	<main>
+		<section class="school">
+			//=include('html_modules/_top-section_school.html')
+			<!-- CONTAINER -->
+			<div class="container">
+				//=include('html_modules/_school-cources.html')
+			</div><!-- END CONTAINER -->
+			//=include('html_modules/_school-media.html')
+			//=include('html_modules/_school-teachers.html')
+			<!-- CONTAINER -->
+			<div class="container">
+				//=include('html_modules/_school-contacts.html')
+			</div><!-- END CONTAINER -->
+		</section>
+	</main>
+	//=include('templates/footer.html')
+	//=include('html_modules/_modal.html')
+	//=include('templates/afterFooterContent.html')
+	//=include('templates/mapAPIInit.html')
+</body>
+
+</html>
