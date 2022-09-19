@@ -86,6 +86,16 @@ export default function modal() {
 							img.querySelector('img').setAttribute('src', itemImg);
 						}
 					}
+
+					if (document.querySelector('#lightbox-btn--next')) {
+						document.querySelector('#lightbox-btn--next').style.marginRight =
+							document.body.style.paddingRight;
+					}
+
+					if (document.querySelector('#modal__close')) {
+						document.querySelector('#modal__close').style.marginRight =
+							document.body.style.paddingRight;
+					}
 				}
 			});
 		});
@@ -98,7 +108,7 @@ export default function modal() {
 
 				e.stopPropagation();
 
-				if (!target.closest('.modal__content') || target.closest('.modal__close')) {
+				if (target.closest('.modal__close')) {
 					el.classList.remove('show');
 					setTimeout(() => {
 						el.classList.add('dn');
