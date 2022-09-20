@@ -4,12 +4,20 @@ export default function modal() {
 
 	if (document.querySelector('#lightbox-list .list-img')) {
 		document.querySelectorAll('#lightbox-list .list-img').forEach((el) => {
-			const temImgWebp = el.dataset.imgWebp,
-				itemImg = el.dataset.img;
+			const webp = el.dataset.imgWebp.split(','),
+				img = el.dataset.img,
+				imgW = el.dataset.sizes.split(',')?.at(0),
+				imgH = el.dataset.sizes.split(',')?.at(1);
 
 			images.push({
-				webp: temImgWebp,
-				img: itemImg,
+				webp576: webp?.at(0),
+				webp768: webp?.at(1),
+				webp1200: webp?.at(2),
+				webp1600: webp?.at(3),
+				webp: webp?.at(4),
+				img,
+				imgW,
+				imgH,
 			});
 		});
 	}
@@ -23,7 +31,41 @@ export default function modal() {
 		const prevBtn = document.querySelector('#lightbox-btn--prev'),
 			nextBtn = document.querySelector('#lightbox-btn--next'),
 			targetModal = document.querySelector('[data-modal="modal-1"]'),
+			picture = targetModal.querySelector('picture'),
+			img = targetModal.querySelector('picture img'),
 			list = document.querySelector('#lightbox-list');
+
+		function setPictureAttributes() {
+			if (picture.querySelector('source')) {
+				picture.querySelectorAll('source').forEach((el, index) => {
+					switch (index) {
+						case 0:
+							el.setAttribute('srcset', images?.at(itemIndex)?.webp576);
+							break;
+						case 1:
+							el.setAttribute('srcset', images?.at(itemIndex)?.webp768);
+							break;
+						case 2:
+							el.setAttribute('srcset', images?.at(itemIndex)?.webp1200);
+							break;
+						case 3:
+							el.setAttribute('srcset', images?.at(itemIndex)?.webp1600);
+							break;
+						case 4:
+							el.setAttribute('srcset', images?.at(itemIndex)?.webp);
+							break;
+						default:
+							el.setAttribute('srcset', images?.at(itemIndex)?.img);
+					}
+
+					if (img) {
+						img.setAttribute('src', images?.at(itemIndex)?.img);
+						img.setAttribute('width', images?.at(itemIndex)?.imgW);
+						img.setAttribute('height', images?.at(itemIndex)?.imgH);
+					}
+				});
+			}
+		}
 
 		prevBtn.addEventListener('click', () => {
 			if (itemIndex > 0) {
@@ -31,10 +73,7 @@ export default function modal() {
 			} else {
 				itemIndex = list?.children.length - 1;
 			}
-			targetModal
-				.querySelector('picture source')
-				.setAttribute('srcset', images.at(itemIndex)?.webp);
-			targetModal.querySelector('picture img').setAttribute('src', images.at(itemIndex)?.img);
+			setPictureAttributes();
 		});
 
 		nextBtn.addEventListener('click', () => {
@@ -43,81 +82,71 @@ export default function modal() {
 			} else {
 				itemIndex = 0;
 			}
-			targetModal
-				.querySelector('picture source')
-				.setAttribute('srcset', images.at(itemIndex)?.webp);
-			targetModal.querySelector('picture img').setAttribute('src', images.at(itemIndex)?.img);
+			setPictureAttributes();
 		});
-	}
 
-	if (document.querySelector('.modal-btn')) {
-		document.querySelectorAll('.modal-btn').forEach((el, index) => {
-			el.addEventListener('click', function (e) {
-				e.preventDefault();
-				if (el.dataset.modalBtn !== '') {
-					const targetModal = document.querySelector(`[data-modal="${el.dataset.modalBtn}"]`);
+		if (document.querySelector('.modal-btn')) {
+			document.querySelectorAll('.modal-btn').forEach((el, index) => {
+				el.addEventListener('click', function (e) {
+					e.preventDefault();
 
-					targetModal.classList.remove('dn');
-					setTimeout(() => {
-						targetModal.classList.add('show');
-					}, 50);
+					if (el.dataset.modalBtn !== '') {
+						const targetModal = document.querySelector(
+							`[data-modal="${el.dataset.modalBtn}"]`
+						);
 
-					document.body.style.paddingRight =
-						window.innerWidth - document.documentElement.clientWidth + 'px';
-					document.body.style.overflowY = 'hidden';
+						targetModal.classList.remove('dn');
+						setTimeout(() => {
+							targetModal.classList.add('show');
+						}, 50);
 
-					if (
-						el.dataset.modalBtn === 'modal-1' &&
-						el.dataset.imgWebp !== '' &&
-						el.dataset.img !== '' &&
-						targetModal.querySelector('picture')
-					) {
-						const itemImgWebp = el.dataset.imgWebp,
-							itemImg = el.dataset.img,
-							img = targetModal.querySelector('picture');
+						document.body.style.paddingRight =
+							window.innerWidth - document.documentElement.clientWidth + 'px';
+						document.body.style.overflowY = 'hidden';
 
-						itemIndex = index;
-
-						if (img.querySelector('source')) {
-							img.querySelector('source').setAttribute('srcset', itemImgWebp);
+						if (
+							el.dataset.modalBtn === 'modal-1' &&
+							el.dataset.imgWebp !== '' &&
+							el.dataset.img !== '' &&
+							el.dataset.sizes !== '' &&
+							targetModal.querySelector('picture')
+						) {
+							itemIndex = index;
+							setPictureAttributes();
 						}
 
-						if (img.querySelector('img')) {
-							img.querySelector('img').setAttribute('src', itemImg);
+						if (document.querySelector('#lightbox-btn--next')) {
+							document.querySelector('#lightbox-btn--next').style.marginRight =
+								document.body.style.paddingRight;
+						}
+
+						if (document.querySelector('#modal__close')) {
+							document.querySelector('#modal__close').style.marginRight =
+								document.body.style.paddingRight;
 						}
 					}
-
-					if (document.querySelector('#lightbox-btn--next')) {
-						document.querySelector('#lightbox-btn--next').style.marginRight =
-							document.body.style.paddingRight;
-					}
-
-					if (document.querySelector('#modal__close')) {
-						document.querySelector('#modal__close').style.marginRight =
-							document.body.style.paddingRight;
-					}
-				}
+				});
 			});
-		});
-	}
+		}
 
-	if (document.querySelector('.modal-overlay')) {
-		document.querySelectorAll('.modal-overlay').forEach((el) => {
-			el.addEventListener('click', function (e) {
-				const target = e.target;
+		if (document.querySelector('.modal-overlay')) {
+			document.querySelectorAll('.modal-overlay').forEach((el) => {
+				el.addEventListener('click', function (e) {
+					const target = e.target;
 
-				e.stopPropagation();
+					e.stopPropagation();
 
-				if (target.closest('.modal__close')) {
-					el.classList.remove('show');
-					setTimeout(() => {
-						el.classList.add('dn');
-					}, 200);
+					if (target.closest('.modal__close')) {
+						el.classList.remove('show');
+						setTimeout(() => {
+							el.classList.add('dn');
+						}, 200);
 
-					document.body.style.overflowY = '';
-					document.body.style.paddingRight = '';
-				}
+						document.body.style.overflowY = '';
+						document.body.style.paddingRight = '';
+					}
+				});
 			});
-		});
+		}
 	}
 }
