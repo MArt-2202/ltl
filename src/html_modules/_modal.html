@@ -17,8 +17,12 @@
 	<div class="modal">
 		<div class="modal__content modal__content-style-1">
 			<picture>
+				<source srcset="img/loader.gif" media="(max-width: 576px)" type="image/webp">
+				<source srcset="img/loader.gif" media="(min-width: 577px) and (max-width: 768px)" type="image/webp">
+				<source srcset="img/loader.gif" media="(min-width: 769px) and (max-width: 1200px)" type="image/webp">
+				<source srcset="img/loader.gif" media="(min-width: 1201px) and (max-width: 1600px)" type="image/webp">
 				<source srcset="img/loader.gif" type="image/webp">
-				<img src="img/loader.gif" alt="" loading="lazy">
+				<img src="img/loader.gif" width="30" height="30" alt="" loading="lazy">
 			</picture>
 		</div>
 	</div>
