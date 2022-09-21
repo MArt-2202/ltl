@@ -46,6 +46,9 @@ window.addEventListener('resize', () => {
 });
 
 window.addEventListener('load', () => {
+	if (document.querySelector('header')) {
+		document.querySelector('header').classList.add('header--ready');
+	}
 	debounce(function () {
 		blocksStyles();
 		blockPosition();
