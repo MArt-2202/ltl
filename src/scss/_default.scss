@@ -225,19 +225,37 @@ h4 {
 
 @media (max-width: 415px) {
 	h1 {
-		font-size: fsz(37, 16);
+		font-size: fsz(37, 14);
 	}
 
 	h2 {
-		font-size: fsz(27, 16);
+		font-size: fsz(27, 14);
 	}
 
 	h3 {
-		font-size: fsz(20, 16);
+		font-size: fsz(20, 14);
 	}
 
 	h4 {
 		font-size: fsz(16, 14);
+	}
+}
+
+@media (max-width: 360px) {
+	h1 {
+		font-size: fsz(33, 14);
+	}
+
+	h2 {
+		font-size: fsz(23, 14);
+	}
+
+	h3 {
+		font-size: fsz(17, 14);
+	}
+
+	h4 {
+		font-size: 1rem
 	}
 }
 
