@@ -11,7 +11,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		height: calc(100vh - 80px);
+		min-height: calc(100vh - 80px);
 	}
 
 	video {
@@ -58,6 +58,38 @@
 		}
 	}
 }
+
+@media (max-width: 1200px) {
+	.top-section {
+		margin-top: -40px;
+
+		.container {
+			min-height: calc(100vh - 69px);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.top-section {
+		.container {
+			padding-top: 35px;
+			padding-bottom: 35px;
+			min-height: 50vh;
+		}
+	}
+
+	.top-section__content {
+		h1 {
+			margin-bottom: 15px;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+}
+
+
 
 /*
 =================================
