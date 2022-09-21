@@ -61,7 +61,13 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 
 @media (max-width: 1200px) {
 	main {
-		padding-top: 110px;
+		padding-top: 109px;
+	}
+}
+
+@media (max-width: 360px) {
+	main {
+		padding-top: 99px;
 	}
 }
 
