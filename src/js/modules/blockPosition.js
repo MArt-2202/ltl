@@ -1,6 +1,9 @@
 // BLOCK POSITION
 export default function blockPosition() {
-	const bl1 = document.querySelector('.toggle-wrapper > div > div');
+	const bl1 = document.querySelector('.toggle-wrapper > div > div'),
+		bl2 = document.querySelector('.header__bl-2'),
+		bl3 = document.querySelector('.header__nav'),
+		bl4 = document.querySelector('.header__phone');
 
 	if (window.matchMedia('(min-width: 361px)').matches) {
 		document.body.classList.remove('max-360');
@@ -56,6 +59,12 @@ export default function blockPosition() {
 			document.body.classList.add('min-1201');
 
 			if (document.querySelector('.min-1201')) {
+				if (bl2 && bl3) {
+					bl2.prepend(bl3);
+				}
+				if (bl3 && bl4) {
+					bl3.after(bl4);
+				}
 			}
 		}
 	}
@@ -67,6 +76,12 @@ export default function blockPosition() {
 			document.body.classList.add('max-1200');
 
 			if (document.querySelector('.max-1200')) {
+				if (bl1 && bl3) {
+					bl1.prepend(bl3);
+				}
+				if (bl3 && bl4) {
+					bl3.after(bl4);
+				}
 			}
 		}
 	}
