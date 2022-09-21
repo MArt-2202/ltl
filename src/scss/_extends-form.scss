@@ -184,4 +184,37 @@
 			}
 		}
 	}
+
+	@media (max-width: 576px) {
+		&.form-style-1 {
+			>div {
+				&.required-field {
+					>span {
+						font-size: 1rem;
+					}
+				}
+
+				label {
+					font-size: 1rem;
+				}
+			}
+
+			textarea,
+			input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']) {
+				&:focus {
+					&+label {
+						font-size: 1rem;
+					}
+				}
+			}
+
+			input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']) {
+				&[type="tel"] {
+					&+label {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
 }
