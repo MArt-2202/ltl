@@ -323,6 +323,20 @@ label {
 	}
 }
 
+@media (max-width: 576px) {
+	.order-form {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@media (max-width: 360px) {
+	.order-form {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
 .input-wrapper {
 	position: relative;
 	display: flex;
