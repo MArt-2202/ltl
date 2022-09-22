@@ -320,6 +320,13 @@
 	}
 }
 
+@media (max-width: 576px) {
+	.school__gallery__list {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
 @media (max-width: 360px) {
 	.school__gallery__list {
 		padding-left: 15px;
