@@ -272,6 +272,13 @@
 	right: 0;
 }
 
+@media (max-width: 360px) {
+	.slider-wrapper {
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+}
+
 .lightbox-btn--prev {
 	left: 15px;
 }
@@ -501,20 +508,20 @@
 	height: 60px;
 	padding: 0 10px;
 	font-size: fsz(22, 16);
-	line-height: 60px;
+	line-height: 62px;
 	border-radius: 10px;
 }
 
 @media (max-width: 768px) {
 	.btn-style-1 {
-		height: 50px;
-		line-height: 50px;
 		font-size: fsz(20, 16);
 	}
 }
 
 @media (max-width: 576px) {
 	.btn-style-1 {
+		height: 50px;
+		line-height: 52px;
 		font-size: fsz(18, 14);
 	}
 }
