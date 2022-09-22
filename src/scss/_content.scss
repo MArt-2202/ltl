@@ -89,8 +89,6 @@
 	}
 }
 
-
-
 /*
 =================================
 	CLIENTS
@@ -116,6 +114,56 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		overflow: hidden;
+	}
+
+	picture,
+	img {
+		max-height: 100%;
+		width: auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.clients__list {
+		li {
+			padding-top: 63.7%;
+
+			&:first-child,
+			&:nth-child(2),
+			&:nth-child(3) {
+				border-bottom: 1px solid $c8;
+			}
+
+			&:nth-child(3) {
+				border-right: none;
+			}
+		}
+
+		a {
+			top: 15px;
+			bottom: 15px;
+			left: 15px;
+			right: 15px;
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.clients__list {
+		li {
+			&:nth-child(odd) {
+				border-right: 1px solid $c8;
+			}
+
+			&:nth-child(even) {
+				border-right: none;
+			}
+
+			&:nth-child(4) {
+				border-bottom: 1px solid $c8;
+			}
+		}
 	}
 }
 
@@ -132,6 +180,22 @@
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.about {
+		p {
+			font-size: fsz(18, 16);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.about {
+		p {
+			font-size: 1rem;
 		}
 	}
 }
@@ -271,6 +335,210 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.production-services__list {
+		a {
+			strong {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.production-services__list {
+		padding-top: 30px;
+
+		a {
+			>div {
+				width: 100px;
+				height: 127px;
+				margin-bottom: 15px;
+			}
+
+			&.production-services__list--item-1 {
+				>div {
+					div {
+						width: 100px;
+						height: 111px;
+						background-position: -19px -212px;
+					}
+				}
+			}
+
+			&.production-services__list--item-2 {
+				>div {
+					div {
+						width: 100px;
+						height: 106px;
+						background-position: -144px -217px;
+					}
+				}
+			}
+
+			&.production-services__list--item-3 {
+				>div {
+					div {
+						width: 100px;
+						height: 95px;
+						background-position: -269px -228px;
+					}
+				}
+			}
+
+			&.production-services__list--item-4 {
+				>div {
+					div {
+						width: 100px;
+						height: 100px;
+						background-position: -393px -223px;
+					}
+				}
+			}
+
+			&.production-services__list--item-5 {
+				>div {
+					div {
+						width: 100px;
+						height: 52px;
+						background-position: -518px -246px;
+					}
+				}
+			}
+
+			&.production-services__list--item-6 {
+				>div {
+					div {
+						width: 100px;
+						height: 92px;
+						background-position: -643px -233px;
+					}
+				}
+			}
+
+			&.production-services__list--item-7 {
+				>div {
+					div {
+						width: 100px;
+						height: 98px;
+						background-position: -757px -226px;
+					}
+				}
+			}
+
+			&.production-services__list--item-8 {
+				>div {
+					div {
+						width: 100px;
+						height: 127px;
+						background-position: -878px -197px;
+					}
+				}
+			}
+
+			strong {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.production-services__list {
+		a {
+			>div {
+				width: 70px;
+				height: 89px;
+				margin-bottom: 10px;
+			}
+
+			&.production-services__list--item-1 {
+				>div {
+					div {
+						width: 70px;
+						height: 78px;
+						background-position: -997px -197px;
+					}
+				}
+			}
+
+			&.production-services__list--item-2 {
+				>div {
+					div {
+						width: 70px;
+						height: 74px;
+						background-position: -1089px -200px;
+					}
+				}
+			}
+
+			&.production-services__list--item-3 {
+				>div {
+					div {
+						width: 70px;
+						height: 67px;
+						background-position: -1180px -206px;
+					}
+				}
+			}
+
+			&.production-services__list--item-4 {
+				>div {
+					div {
+						width: 70px;
+						height: 70px;
+						background-position: -1266px -202px;
+					}
+				}
+			}
+
+			&.production-services__list--item-5 {
+				>div {
+					div {
+						width: 50px;
+						height: 36px;
+						background-position: -1354px -194px;
+					}
+				}
+			}
+
+			&.production-services__list--item-6 {
+				>div {
+					div {
+						width: 70px;
+						height: 65px;
+						background-position: -1452px -194px;
+					}
+				}
+			}
+
+			&.production-services__list--item-7 {
+				>div {
+					div {
+						width: 70px;
+						height: 69px;
+						background-position: -1353px -241px;
+					}
+				}
+			}
+
+			&.production-services__list--item-8 {
+				>div {
+					div {
+						width: 70px;
+						height: 89px;
+						background-position: -1443px -276px;
+					}
+				}
+			}
+
+			strong {
+				font-size: fsz(12, 14);
+			}
+		}
+	}
+}
+
 /*
 =================================
 	REVIEWS
@@ -310,6 +578,23 @@
 	border-radius: 50%;
 }
 
+@media (max-width: 576px) {
+	.reviews__slider-item {
+
+		p {
+			font-size: 1rem;
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.reviews__slider-item {
+		p {
+			font-size: fsz(12, 14);
+		}
+	}
+}
+
 /*
 =================================
 	PARTNERS SERVICES
@@ -330,6 +615,14 @@
 @media (max-width: 1024px) {
 	.partners-services {
 		h3+p+.accordion {
+			margin-top: 35px;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.partners-services {
+		.btn+h3 {
 			margin-top: 35px;
 		}
 	}
