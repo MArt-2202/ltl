@@ -275,6 +275,34 @@
 	}
 }
 
+@media (max-width: 1024px) {
+	.school__media-list {
+		strong {
+			font-size: fsz(22, 16);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.school__media-list {
+		strong {
+			font-size: fsz(20, 16);
+		}
+	}
+}
+
+@media (max-width:576px) {
+	.school__media-list {
+		.video-wrapper {
+			margin-bottom: 15px;
+		}
+
+		strong {
+			font-size: 1rem;
+		}
+	}
+}
+
 .school__gallery__list {
 	padding: 20px;
 	padding-right: 20px;
