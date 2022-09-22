@@ -160,7 +160,6 @@
 	>div {
 		flex-grow: 1;
 		width: 50%;
-		;
 	}
 
 	a,
@@ -208,6 +207,7 @@
 		font-size: fsz(36, 16);
 		font-weight: 600;
 		line-height: 1.25;
+		text-align: center;
 	}
 
 	.list-img {
@@ -220,6 +220,37 @@
 			height: 100%;
 			background-color: rgba($cb, 0.7);
 			@include trs-all;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.products__catalog {
+		strong {
+			margin-bottom: 25px;
+			font-size: fsz(30, 16);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.products__catalog {
+		strong {
+			font-size: fsz(25, 16);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.products__catalog {
+		flex-direction: column;
+
+		>div {
+			width: 100%;
+		}
+
+		strong {
+			font-size: fsz(20, 14);
 		}
 	}
 }
