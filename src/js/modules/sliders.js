@@ -1,6 +1,9 @@
+import Swiper, { Navigation, Pagination } from 'swiper';
+
 export default function sliders() {
 	if (document.querySelector('.reviews__slider')) {
 		new Swiper('.reviews__slider', {
+			modules: [Navigation, Pagination],
 			on: {
 				init() {
 					if (document.querySelector('.reviews__slider-wrapper')) {
