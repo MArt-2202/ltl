@@ -27,6 +27,14 @@ if (isMobile()) {
 	document.body.classList.add('mobile-user-agent');
 }
 
+function teachersListStyles() {
+	if (document.querySelector('.school__teachers-list .list-img')) {
+		document
+			.querySelectorAll('.school__teachers-list .list-img')
+			.forEach((el) => (el.style.paddingTop = `${el.offsetWidth}px`));
+	}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	sliders();
 	accordion();
@@ -42,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('resize', () => {
 	debounce(function () {
 		blockPosition();
+		teachersListStyles();
 	}, 200);
 });
 
@@ -52,5 +61,6 @@ window.addEventListener('load', () => {
 	debounce(function () {
 		blocksStyles();
 		blockPosition();
+		teachersListStyles();
 	}, 200);
 });
