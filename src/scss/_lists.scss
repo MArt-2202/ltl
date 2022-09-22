@@ -63,16 +63,30 @@
 	}
 
 	.list-2,
+	.list-4,
 	.list-5,
 	.list-6,
 	.list-7 {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.list-4,
+	.list-5 {
+		gap: 40px mp(40, 708);
 	}
 }
 
 @media (max-width: 576px) {
 	.list-2 {
 		gap: 40px 20px;
+	}
+
+	.list-5 {
+		gap: 20px;
+	}
+
+	.list-8 {
+		grid-template-columns: 1fr;
 	}
 
 	.list-3 {
@@ -84,6 +98,11 @@
 	.list-1 {
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	.list-4 {
+		grid-template-columns: 1fr;
+		gap: 60px;
+	}
 }
 
 @media (max-width: 360px) {
@@ -91,7 +110,9 @@
 		gap: 40px 15px;
 	}
 
-	.list-3 {
+	.list-3,
+	.list-5,
+	.list-7 {
 		gap: 15px;
 	}
 }
