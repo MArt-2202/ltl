@@ -219,15 +219,15 @@
 }
 
 .school__teachers-list {
+	text-align: center;
 
 	strong,
 	span {
 		display: block;
-		text-align: center;
 	}
 
 	.list-img {
-		padding-top: 70.375%;
+		display: inline-block;
 		width: min(190px, 100%);
 		margin: 0 auto 18px auto;
 		border-radius: 50%;
@@ -252,6 +252,35 @@
 	.school__teachers {
 		padding-top: 73px;
 		padding-bottom: 80px;
+	}
+
+	.school__teachers-list {
+		strong {
+			font-size: fsz(20, 16);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.school__teachers-list {
+		strong {
+			font-size: fsz(18, 16);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.school__teachers-list {
+		strong {
+			font-size: fsz(16, 14);
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.school__teachers-list {
+		grid-template-columns: 1fr;
+		gap: 40px;
 	}
 }
 
