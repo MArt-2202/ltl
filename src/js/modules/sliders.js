@@ -27,6 +27,7 @@ export default function sliders() {
 
 	if (document.querySelector('.confidence__slider')) {
 		new Swiper('.confidence__slider', {
+			modules: [Navigation],
 			on: {
 				init() {
 					if (document.querySelector('.confidence__slider-wrapper')) {
