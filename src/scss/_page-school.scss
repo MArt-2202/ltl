@@ -364,10 +364,6 @@
 }
 
 .school-contacts {
-	h3 {
-		margin-bottom: 31px;
-	}
-
 	.school-contacts__aside {
 		ul {
 			margin-bottom: 0;
@@ -398,6 +394,10 @@
 		display: flex;
 		align-items: center;
 		gap: 40px mp(40, 1200);
+
+		h3 {
+			margin-bottom: 31px;
+		}
 	}
 
 	.school-contacts__aside {
@@ -407,5 +407,39 @@
 
 	.school-contacts__main {
 		flex-grow: 1;
+	}
+}
+
+@media (max-width: 1024px) {
+	.school-contacts__aside+.school-contacts__main {
+		margin-top: 40px;
+	}
+
+	.school-contacts {
+		.school-contacts__aside {
+			a {
+				font-size: fsz(18, 16);
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.school-contacts {
+		.school-contacts__aside {
+			a {
+				font-size: fsz(18, 14);
+			}
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.school-contacts {
+		.school-contacts__aside {
+			a {
+				font-size: fsz(16, 14);
+			}
+		}
 	}
 }
