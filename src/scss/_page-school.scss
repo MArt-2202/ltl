@@ -176,6 +176,38 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.school__cources-list {
+		strong {
+			font-size: fsz(18, 16);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.school__cources-list {
+		em {
+			margin-bottom: 20px;
+		}
+
+		strong {
+			font-size: fsz(18, 14);
+		}
+
+		a {
+			font-size: 1rem;
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.school__cources-list {
+		strong {
+			font-size: fsz(16, 14);
+		}
+	}
+}
+
 .school__teachers {
 	padding-top: 110px;
 	padding-bottom: 120px;
