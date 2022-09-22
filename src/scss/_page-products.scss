@@ -138,6 +138,22 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.products__why {
+		p {
+			font-size: fsz(18, 16);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.products__why {
+		p {
+			font-size: 1rem;
+		}
+	}
+}
+
 .products__catalog {
 	display: flex;
 
