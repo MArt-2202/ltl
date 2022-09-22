@@ -205,6 +205,26 @@
 	}
 }
 
+.style-8 {
+	min-height: calc(100vh - 80px);
+}
+
+@media (max-width: 1200px) {
+	.style-5 {
+		margin-top: -40px;
+	}
+
+	.style-6 {
+		min-height: calc(100vh - 69px);
+	}
+}
+
+@media (max-width: 360px) {
+	.style-7 {
+		min-height: calc(100vh - 59px);
+	}
+}
+
 .slider-wrapper {
 	position: relative;
 	padding-left: 60px;
