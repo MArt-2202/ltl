@@ -579,6 +579,13 @@
 	border-radius: 100px;
 }
 
+@media (max-width: 576px) {
+	.btn-style-6 {
+		padding-top: 17px;
+		padding-bottom: 17px;
+	}
+}
+
 .gm-style-iw-d {
 	p {
 		margin-bottom: 15px;
