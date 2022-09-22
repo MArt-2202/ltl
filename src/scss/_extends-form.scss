@@ -23,7 +23,6 @@
 	.form__icon {
 		input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']) {
 			padding-left: 65px;
-			padding-right: 65px;
 		}
 	}
 
@@ -186,6 +185,13 @@
 	}
 
 	@media (max-width: 576px) {
+
+		input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']),
+		select,
+		.form__submit {
+			height: 50px;
+		}
+
 		&.form-style-1 {
 			>div {
 				&.required-field {
@@ -215,6 +221,25 @@
 					}
 				}
 			}
+		}
+	}
+
+	@media (max-width: 360px) {
+		.form__icon {
+			input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']) {
+				padding-left: 45px;
+			}
+		}
+
+		textarea,
+		input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		textarea {
+			padding-top: 11px;
+			padding-bottom: 11px;
 		}
 	}
 }
