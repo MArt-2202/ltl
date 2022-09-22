@@ -299,9 +299,31 @@ label {
 }
 
 @media (max-width: 576px) {
+	.form {
+		.form__submit {
+			line-height: 50px;
+		}
+	}
+
+	.search-form {
+		grid-template-columns: 1fr;
+	}
+
 	.search-form__list {
 		p {
 			font-size: fsz(12, 14);
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.form__icon {
+		&.form__icon--search {
+			>svg {
+				left: 15px;
+				width: 15px;
+				height: 15px;
+			}
 		}
 	}
 }
