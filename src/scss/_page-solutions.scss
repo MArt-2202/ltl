@@ -4,7 +4,7 @@
 		text-align: center;
 		background-color: $c21;
 
-		&+.container-sm p {
+		&+.container-xs p {
 			font-size: fsz(18, 16);
 			font-family: $f1;
 			text-align: center;
@@ -216,7 +216,7 @@
 		h1 {
 			padding: 67px 15px;
 
-			&+.container-sm p {
+			&+.container-xs p {
 				font-size: fsz(16, 14);
 			}
 		}
