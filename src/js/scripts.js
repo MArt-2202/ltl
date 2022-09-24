@@ -11,6 +11,7 @@ import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
 import masketInput from './modules/masketInput';
 import scrollToAnchor from './modules/scrollToAnchor';
+import tabs from './modules/tabs';
 import mapIntersectionObserver from './modules/mapIntersectionObserver';
 
 if ('ontouchstart' in document.documentElement) {
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	toggleContent();
 	masketInput();
 	scrollToAnchor();
+	tabs({});
 	mapIntersectionObserver('#map-with-pins');
 }); // END READY
 
