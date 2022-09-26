@@ -40,7 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	sliders();
 	accordion();
 	backToTop();
-	modal();
+	modal('[data-modal="modal-1"]', '#lightbox-list-1');
+	modal('[data-modal="oak-se"]', '#oak-se');
+	modal('[data-modal="beech-se"]', '#beech-se');
+	modal('[data-modal="ash-vr"]', '#ash-vr');
+	modal('[data-modal="oak-vr"]', '#oak-vr');
+	modal('[data-modal="alder-vr"]', '#alder-vr');
 	tableWrapper();
 	toggleContent();
 	masketInput();
