@@ -579,10 +579,34 @@
 	border-radius: 100px;
 }
 
+.btn-style-7 {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	width: calc(min(160px, 100%));
+	height: 40px;
+	padding: 0 10px;
+	font-size: fsz(14, 16);
+	line-height: 42px;
+	color: $cb;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba($cb, 0.3);
+
+	&:hover {
+		text-decoration: none;
+		background-color: $cb;
+		color: $c1;
+	}
+}
+
 @media (max-width: 576px) {
 	.btn-style-6 {
 		padding-top: 17px;
 		padding-bottom: 17px;
+	}
+
+	.btn-style-7 {
+		font-size: 1rem;
 	}
 }
 
@@ -598,5 +622,67 @@
 	a[href^="tel"] {
 		display: table;
 		max-width: 100%;
+	}
+}
+
+.tabs__list {
+	margin-bottom: 80px;
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+
+	li {
+		display: inline-block;
+		padding: 15px 22px 13px 22px;
+		min-width: 120px;
+		scroll-snap-align: start;
+		white-space: nowrap;
+		font-size: fsz(14, 16);
+		font-weight: 600;
+		line-height: 1;
+		border-top: 1px solid $c5;
+		border-bottom: 1px solid $c5;
+		border-right: 1px solid $c5;
+		text-align: center;
+		cursor: pointer;
+		@include trs-all;
+
+		&:first-child {
+			border-left: 1px solid $c5;
+			border-radius: 5px 0 0 5px;
+		}
+
+		&:last-child {
+			border-radius: 0 5px 5px 0;
+		}
+
+		&+li {
+			border-left: 1px solid $c5;
+		}
+
+		&.active {
+			color: $c1;
+			background-color: $c39;
+			border-color: $c39;
+			pointer-events: none;
+		}
+	}
+}
+
+@media (min-width: 416px) {
+	.tabs__list {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 1024px) {
+	.tabs__list {
+		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 576px) {
+	.tabs__list {
+		margin-bottom: 20px;
 	}
 }
