@@ -57,7 +57,7 @@
 	.services__steps {
 		>li {
 			padding-top: 80px;
-			margin-bottom: 100px;
+			// margin-bottom: 100px;
 
 			>section {
 				padding-top: 70px;
@@ -148,6 +148,182 @@
 	.services__info-3 {
 		p {
 			font-size: 1rem;
+		}
+	}
+}
+
+.services__info-4 {
+	position: relative;
+
+	h2 {
+		text-align: center;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 25px;
+		transform: translateX(-50%);
+		width: 1px;
+		height: 65px;
+		background-color: $cb;
+	}
+}
+
+.services__info-4-content {
+	display: flex;
+
+	ul {
+		margin-bottom: 0;
+	}
+
+	li {
+		position: relative;
+	}
+
+	svg {
+		position: absolute;
+		top: 5px;
+		width: 45px;
+		height: 45px;
+		fill: currentColor;
+	}
+
+	strong {
+		display: block;
+		margin-bottom: 11px;
+		font-size: fsz(22, 16);
+		font-weight: 600;
+		line-height: 1.35;
+	}
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (min-width: 769px) {
+	.services__info-4-content {
+		gap: 25px;
+		align-items: center;
+
+		>div {
+
+			&:first-child,
+			&:last-child {
+				flex: none;
+				width: 280px;
+			}
+
+			&:first-child {
+				text-align: right;
+
+				li {
+					padding-right: 65px;
+				}
+
+				svg {
+					right: 0;
+				}
+			}
+
+			&:nth-child(2) {
+				flex-grow: 1;
+			}
+
+			&:last-child {
+				li {
+					padding-left: 65px;
+				}
+
+				svg {
+					left: 0;
+				}
+			}
+		}
+
+		li {
+			&+li {
+				margin-top: 45px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.services__info-4 {
+		&:after {
+			bottom: 20px;
+			height: 35px;
+		}
+	}
+
+	.services__info-4-content {
+		flex-direction: column;
+
+		>div {
+			&:nth-child(2) {
+				margin-top: 53px;
+				order: 1;
+			}
+
+			&:first-child {
+				margin-bottom: 20px;
+			}
+		}
+
+		li {
+			padding-left: 65px;
+
+
+			&+li {
+				margin-top: 20px;
+			}
+		}
+
+		strong {
+			margin-bottom: 5px;
+			font-size: fsz(20, 16);
+		}
+
+		svg {
+			left: 0;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.services__info-4 {
+		&:after {
+			bottom: 15px;
+			height: 25px;
+		}
+	}
+
+	.services__info-4-content {
+		li {
+			padding-left: 50px;
+		}
+
+		svg {
+			top: 3px;
+			width: 30px;
+			height: 30px;
+		}
+
+		strong {
+			font-size: fsz(16, 14);
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.services__info-4-content {
+		li {
+			padding-left: 45px;
 		}
 	}
 }
