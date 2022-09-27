@@ -1,7 +1,7 @@
 export default function blockStyles() {
 	if (document.querySelector('h2')) {
 		document.querySelectorAll('h2').forEach((el) => {
-			if (el.nextElementSibling?.tagName === 'P') {
+			if (el.nextElementSibling?.tagName === 'P' && !el.closest('.services__info-3')) {
 				el.classList.add('title-1');
 			}
 		});
