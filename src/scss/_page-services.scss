@@ -92,7 +92,7 @@
 
 		ol {
 			strong {
-				font-size: 1rem;
+				font-size: fsz(16, 14);
 			}
 
 			li {
@@ -120,6 +120,115 @@
 @media (max-width: 360px) {
 	.services__info-5 {
 		ol {
+			li {
+				padding-left: 45px;
+			}
+		}
+	}
+}
+
+.services__info-6 {
+	background-color: $c11;
+
+	h2 {
+		text-align: center;
+	}
+
+	ul {
+		max-width: 760px;
+		margin-bottom: 0;
+		margin-left: auto;
+		margin-right: auto;
+
+		li {
+			position: relative;
+			padding-left: 50px;
+
+			&+li {
+				margin-top: 60px;
+			}
+
+			&:last-child {
+				strong {
+					margin-bottom: 0;
+				}
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: -2px;
+				left: 0;
+				width: 30px;
+				height: 30px;
+				border-radius: 30px;
+				background-image: url("data:image/svg+xml,%3Csvg fill='%23cc0404' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50.2 1.9C23.5 1.9 1.7 23.7 1.7 50.4s21.8 48.5 48.5 48.5 48.4-21.8 48.5-48.5c0-26.7-21.8-48.5-48.5-48.5zm-7.3 71.4L22.7 53.2l4.2-4.3 15.8 15.7 32.1-35.4 4.4 4-36.3 40.1z'/%3E%3Cpath d='M50.2 1.9C23.5 1.9 1.7 23.7 1.7 50.4s21.8 48.5 48.5 48.5 48.4-21.8 48.5-48.5c0-26.7-21.8-48.5-48.5-48.5zm-7.3 71.4L22.7 53.2l4.2-4.3 15.8 15.7 32.1-35.4 4.4 4-36.3 40.1z'/%3E%3C/svg%3E");
+			}
+		}
+
+		p {
+			margin-bottom: 0;
+			font-size: fsz(18, 16);
+			line-height: 1.35;
+
+			strong {
+				display: block;
+				margin-bottom: 15px;
+				font-size: fsz(20, 16);
+				font-weight: 600;
+				line-height: 1.35;
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.services__info-6 {
+		ul {
+			li {
+				&+li {
+					margin-top: 40px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.services__info-6 {
+		ul {
+			p {
+				strong {
+					font-size: fsz(18, 16);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.services__info-6 {
+		ul {
+			li {
+				&+li {
+					margin-top: 20px;
+				}
+			}
+
+			p {
+				font-size: 1rem;
+
+				strong {
+					font-size: fsz(16, 14);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.services__info-6 {
+		ul {
 			li {
 				padding-left: 45px;
 			}
