@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	accordion();
 	backToTop();
 	modal('[data-modal="modal-1"]', '#lightbox-list-1');
+	modal('[data-modal="school-gallery"]', '#school-gallery');
 	modal('[data-modal="oak-se"]', '#oak-se');
 	modal('[data-modal="beech-se"]', '#beech-se');
 	modal('[data-modal="ash-vr"]', '#ash-vr');
