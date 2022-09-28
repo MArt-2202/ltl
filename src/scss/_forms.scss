@@ -170,49 +170,46 @@ label {
 	}
 }
 
-.search-form {
-	display: grid;
-	grid-template-columns: 1fr 170px;
-	gap: 20px;
-	padding-top: 30px;
-	padding-bottom: 30px;
-
+.autocomplete-form {
 	>div {
 		&:first-child {
 			position: relative;
 		}
 	}
 
-	.search-form__close {
-		position: absolute;
-		top: 50%;
-		right: 20px;
-		transform: translateY(-50%);
+	.autocomplete-form__close {
 		width: 24px;
-		height: 24px;
-		padding: 0;
-		color: $cb;
-		border: none;
-		cursor: pointer;
-
-		svg {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 18px;
-			height: 18px;
-			fill: currentColor;
-			@include trs-all;
-		}
-
-		&:hover {
-			color: $c15;
-		}
 	}
 }
 
-.search-form__list {
+.autocomplete-form__close {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	height: 24px;
+	padding: 0;
+	color: $cb;
+	border: none;
+	cursor: pointer;
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 18px;
+		height: 18px;
+		fill: currentColor;
+		@include trs-all;
+	}
+
+	&:hover {
+		color: $c15;
+	}
+}
+
+.autocomplete-form__list {
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -226,6 +223,7 @@ label {
 	visibility: hidden;
 	transform: scaleY(0);
 	transform-origin: 50% 0;
+	box-shadow: 0 2px 10px rgb($cb, 0.1);
 	transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 	&.show {
@@ -262,7 +260,7 @@ label {
 
 	h4 {
 		margin-bottom: 4px;
-		font-size: fsz(20, 16);
+		font-size: 1rem;
 		font-weight: 400;
 		line-height: 1.2;
 		color: $cb;
@@ -282,8 +280,16 @@ label {
 	}
 }
 
+.search-form {
+	display: grid;
+	grid-template-columns: 1fr 170px;
+	gap: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
 @media (max-width: 1024px) {
-	.search-form__list {
+	.autocomplete-form__list {
 		h4 {
 			font-size: fsz(18, 16);
 		}
@@ -291,7 +297,7 @@ label {
 }
 
 @media (max-width: 768px) {
-	.search-form__list {
+	.autocomplete-form__list {
 		h4 {
 			font-size: 1rem;
 		}
@@ -309,7 +315,11 @@ label {
 		grid-template-columns: 1fr;
 	}
 
-	.search-form__list {
+	.autocomplete-form__list {
+		h4 {
+			font-size: fsz(16, 14);
+		}
+
 		p {
 			font-size: fsz(12, 14);
 		}
