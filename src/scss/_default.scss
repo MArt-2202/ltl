@@ -59,15 +59,36 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	background-color: $cb;
 }
 
+@media (min-width: 1201px) and (max-width: 1480px) {
+	.page-with-aside-fixed {
+		.container {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}
+
 @media (max-width: 1200px) {
 	main {
 		padding-top: 109px;
+	}
+
+	.page-with-aside-fixed {
+		main {
+			padding-top: 173px;
+		}
 	}
 }
 
 @media (max-width: 360px) {
 	main {
 		padding-top: 99px;
+	}
+
+	.page-with-aside-fixed {
+		main {
+			padding-top: 165px;
+		}
 	}
 }
 
