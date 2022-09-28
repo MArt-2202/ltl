@@ -179,6 +179,12 @@
 	padding-bottom: 115px;
 }
 
+.style-10 {
+	h3 {
+		margin-bottom: 10px;
+	}
+}
+
 @media (max-width: 1024px) {
 	.style-1 {
 		margin-bottom: 75px;
@@ -532,7 +538,7 @@
 	height: 60px;
 	padding: 0 10px;
 	font-size: fsz(22, 16);
-	line-height: 62px;
+	line-height: 60px;
 	border-radius: 10px;
 }
 
@@ -601,6 +607,17 @@
 		background-color: $cb;
 		color: $c1;
 	}
+}
+
+.btn-style-8 {
+	width: calc(min(280px, 100%));
+}
+
+.btn-style-9 {
+	height: 60px;
+	padding: 0 10px;
+	line-height: 60px;
+	border-radius: 30px;
 }
 
 @media (max-width: 576px) {
