@@ -530,6 +530,17 @@
 	}
 }
 
+.btn-info-3 {
+	color: $cb;
+	border-color: $cb;
+
+	&:hover {
+		color: $c1;
+		border-color: $cb;
+		background-color: $cb;
+	}
+}
+
 .btn-style-1 {
 	display: table;
 	margin-left: auto;
