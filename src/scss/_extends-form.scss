@@ -184,6 +184,30 @@
 		}
 	}
 
+	&.form-style-2 {
+		input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']) {
+			height: 34px;
+			padding-left: 38px;
+			padding-right: 38px;
+			font-size: fsz(12, 16);
+		}
+
+		.autocomplete-form__close,
+		.autocomplete-form__close svg,
+		.form__icon.form__icon--search>svg {
+			width: 15px;
+			height: 15px;
+		}
+
+		.autocomplete-form__close {
+			right: 15px;
+		}
+
+		.form__icon.form__icon--search>svg {
+			left: 15px;
+		}
+	}
+
 	@media (max-width: 576px) {
 
 		input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']),
@@ -220,6 +244,12 @@
 						font-size: 1rem;
 					}
 				}
+			}
+		}
+
+		&.form-style-2 {
+			input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']) {
+				font-size: fsz(12, 14);
 			}
 		}
 	}
