@@ -421,3 +421,174 @@
 		}
 	}
 }
+
+.school__info-8 {
+	position: relative;
+	padding-top: 110px;
+	padding-bottom: 120px;
+	background-color: $c4;
+
+	h2 {
+		text-align: center;
+	}
+}
+
+.school__info-8-list {
+	margin-bottom: 0;
+	font-size: fsz(22, 16);
+
+	>li {
+		padding: 52px 30px 55px 30px;
+		background-color: $c4;
+		border-radius: 5px;
+		border: 1px solid $c46;
+		box-shadow: 0px 0px 0px 0px rgba($cb, 0.1);
+	}
+
+	p,
+	ol {
+		font-family: $f1;
+	}
+
+	em {
+		display: table;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: fsz(42, 16);
+		font-weight: 600;
+		font-style: normal;
+		line-height: 1;
+
+		&+em {
+			margin-top: 10px;
+		}
+
+		&:first-of-type {
+			text-decoration: line-through;
+		}
+
+		&:last-of-type {
+			margin-bottom: 28px;
+		}
+
+		&+p {
+			margin-bottom: 63px;
+		}
+	}
+
+	p {
+		margin-bottom: 45px;
+	}
+
+	strong {
+		font-weight: 700;
+	}
+
+	ol {
+		margin-bottom: 0;
+		counter-reset: num;
+
+		li {
+			position: relative;
+			padding-left: 35px;
+			line-height: 1.55;
+
+			&+li {
+				margin-top: 20px;
+			}
+
+			&:before {
+				content: counter(num)'.';
+				counter-increment: num;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+
+		&+.btn {
+			margin-top: 40px;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.school__info-8 {
+		padding-top: 73px;
+		padding-bottom: 80px;
+	}
+
+	.school__info-8-list {
+		font-size: fsz(20, 16);
+
+		em {
+			font-size: fsz(35, 16);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.school__info-8-list {
+		font-size: fsz(18, 16);
+
+		em {
+			font-size: fsz(30, 16);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.school__info-8 {
+		padding-top: 53px;
+		padding-bottom: 60px;
+	}
+
+	.school__info-8-list {
+		font-size: fsz(16, 14);
+
+		>li {
+			padding: 57px 20px 60px 20px;
+		}
+
+		p {
+			margin-bottom: 30px;
+
+			&+ol {
+				margin-top: -9px;
+			}
+		}
+
+		em {
+			font-size: fsz(25, 14);
+
+			&+p {
+				margin-bottom: 23px;
+			}
+		}
+
+		em+p+p,
+		ol {
+			font-size: 1rem;
+		}
+
+		ol {
+			li {
+				padding-left: 25px;
+			}
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.school__info-8-list {
+		em {
+			font-size: fsz(20, 14);
+		}
+
+		>li {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
