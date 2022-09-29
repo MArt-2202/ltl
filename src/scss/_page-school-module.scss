@@ -144,6 +144,73 @@
 	}
 }
 
+.school__info-3 {
+	padding-top: 118px;
+	padding-bottom: 112px;
+	background-color: $c4;
+	text-align: center;
+
+	h2 {
+		margin-bottom: 40px;
+		text-transform: uppercase;
+	}
+
+	strong {
+		display: block;
+		margin-bottom: 46px;
+		font-weight: 600;
+		letter-spacing: 2.5px;
+		line-height: 1.2;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: fsz(24, 16);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.school__info-3 {
+		padding-top: 78px;
+		padding-bottom: 73px;
+
+		p {
+			font-size: fsz(22, 16);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.school__info-3 {
+		p {
+			font-size: fsz(20, 16);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.school__info-3 {
+		padding-top: 58px;
+		padding-bottom: 55px;
+
+		h2 {
+			margin-bottom: 17px;
+		}
+
+		strong {
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: fsz(16, 14);
+		}
+	}
+}
+
 .school__info-5-list {
 	margin-bottom: 75px;
 
