@@ -186,6 +186,21 @@ export default function modal(node, lightbox) {
 					document.body.style.paddingRight = '';
 				}
 			});
+
+			document.addEventListener('keyup', function (e) {
+				if (e.key === 'Escape') {
+					modal.classList.remove('show');
+					nextBtn.style.marginRight = '';
+					closeBtn.style.marginRight = '';
+
+					setTimeout(() => {
+						modal.classList.add('dn');
+					}, 200);
+
+					document.body.style.overflowY = '';
+					document.body.style.paddingRight = '';
+				}
+			});
 		}
 
 		function setPictureHtml() {
