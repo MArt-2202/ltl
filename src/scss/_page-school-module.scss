@@ -290,3 +290,134 @@
 		}
 	}
 }
+
+.school__media+.school__info-7 {
+	padding-top: 0;
+}
+
+.school__info-7 {
+	position: relative;
+	padding-top: 110px;
+	padding-bottom: 120px;
+	background-color: $c4;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+		width: calc(min(760px, 100%));
+		height: 1px;
+		opacity: 0.2;
+		background: -moz-linear-gradient(left, rgba($cb, 0) 0%, rgba($cb, 1) 35%, rgba($cb, 1) 65%, rgba($cb, 0) 100%);
+		background: -webkit-linear-gradient(left, rgba($cb, 0) 0%, rgba($cb, 1) 35%, rgba($cb, 1) 65%, rgba($cb, 0) 100%);
+		background: linear-gradient(to right, rgba($cb, 0) 0%, rgba($cb, 1) 35%, rgba($cb, 1) 65%, rgba($cb, 0) 100%);
+	}
+}
+
+.school__info-7-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 37px mp(40, 1200);
+	margin-bottom: 0;
+	text-align: center;
+
+	strong {
+		display: block;
+		margin-bottom: 18px;
+		font-size: fsz(20, 16);
+		font-weight: 600;
+		line-height: 1.35;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 1rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	svg {
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+		margin-bottom: 26px;
+		fill: currentColor;
+	}
+}
+
+@media (max-width: 1024px) {
+	.school__info-7 {
+		padding-top: 73px;
+		padding-bottom: 80px;
+	}
+
+	.school__info-7-list {
+		strong {
+			font-size: fsz(18, 16);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.school__info-7-list {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 37px mp(40, 708);
+
+		svg {
+			margin-bottom: 16px;
+		}
+
+		li {
+			&:last-child {
+				svg {
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.school__info-7 {
+		padding-top: 53px;
+		padding-bottom: 60px;
+	}
+
+	.school__info-7-list {
+		strong {
+			font-size: fsz(16, 14);
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.school__info-7-list {
+		grid-template-columns: repeat(1, 1fr);
+
+		svg {
+			margin-bottom: 12px;
+		}
+
+		strong {
+			margin-bottom: 16px;
+		}
+
+		li {
+			&:nth-child(2) {
+				svg {
+					margin-bottom: 2px;
+				}
+			}
+
+			&:last-child {
+				svg {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
