@@ -144,6 +144,109 @@
 	}
 }
 
+.school__info-1 {
+	overflow: hidden;
+
+	h2 {
+		position: relative;
+		padding-top: 23px;
+		padding-bottom: 25px;
+		font-weight: 400;
+		background-color: $c4;
+		text-align: center;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 2000px;
+			background-color: $c4;
+		}
+
+		&:before {
+			left: -2000px;
+
+		}
+
+		&:after {
+			right: -2000px;
+		}
+	}
+
+	p {
+		font-size: fsz(20, 16);
+
+		&:first-of-type {
+			position: relative;
+			padding-top: 20px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 80px;
+				height: 3px;
+				background-color: $c47;
+			}
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (min-width: 577px) {
+	.school__info-1 {
+		h2 {
+			font-size: fsz(30, 16);
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+	.school__info-1 {
+		h2 {
+			margin-bottom: 60px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.school__info-1 {
+		p {
+			font-size: fsz(18, 16);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.school__info-1 {
+		h2 {
+			margin-bottom: 30px;
+		}
+
+		p {
+			font-size: fsz(16, 14);
+
+			&:first-of-type {
+				padding-top: 14px;
+			}
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.school__info-1 {
+		p {
+			font-size: 1rem;
+		}
+	}
+}
+
 .school__info-3 {
 	padding-top: 118px;
 	padding-bottom: 112px;
@@ -207,6 +310,14 @@
 
 		p {
 			font-size: fsz(16, 14);
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.school__info-3 {
+		p {
+			font-size: 1rem;
 		}
 	}
 }
