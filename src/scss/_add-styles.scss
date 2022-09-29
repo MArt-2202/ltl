@@ -510,6 +510,18 @@
 	}
 }
 
+.btn-danger-3 {
+	color: $c1;
+	border-color: $c1;
+	background-color: $c43;
+
+	&:hover {
+		color: $c43;
+		border-color: $c1;
+		background-color: $c1;
+	}
+}
+
 .btn-error {
 	color: $c1;
 	border-color: $c14;
