@@ -499,6 +499,17 @@
 	}
 }
 
+.btn-danger-2 {
+	color: $c1;
+	border-color: $c43;
+	background-color: $c43;
+
+	&:hover {
+		border-color: $c44;
+		background-color: $c44;
+	}
+}
+
 .btn-error {
 	color: $c1;
 	border-color: $c14;
@@ -538,6 +549,18 @@
 		color: $c1;
 		border-color: $cb;
 		background-color: $cb;
+	}
+}
+
+.btn-info-4 {
+	color: $cb;
+	border-color: $c40;
+	background-color: $c40;
+
+	&:hover {
+		color: $cb;
+		border-color: $c45;
+		background-color: $c45;
 	}
 }
 
@@ -631,6 +654,11 @@
 	border-radius: 30px;
 }
 
+.btn-style-10 {
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
 @media (max-width: 576px) {
 	.btn-style-6 {
 		padding-top: 17px;
@@ -639,6 +667,11 @@
 
 	.btn-style-7 {
 		font-size: 1rem;
+	}
+
+	.btn-style-10 {
+		padding-left: 45px;
+		padding-right: 45px;
 	}
 }
 
