@@ -197,7 +197,7 @@
 
 @media (max-width: 768px) {
 	.school__info-5-list {
-		margin-bottom: 56px;
+		margin-bottom: 36px;
 
 		section {
 			&+section {
@@ -220,6 +220,73 @@
 		h3 {
 			padding-bottom: 20px;
 			margin-bottom: 18px;
+		}
+	}
+}
+
+.school__info-6-list {
+	margin-bottom: 0;
+
+	li {
+		position: relative;
+		padding-left: 90px;
+
+		&+li {
+			margin-top: 70px;
+		}
+	}
+
+	strong {
+		display: block;
+		font-size: fsz(20, 16);
+		font-weight: 600;
+		line-height: 1.35;
+	}
+
+	svg {
+		position: absolute;
+		left: 0;
+		top: -14px;
+		width: 55px;
+		height: 55px;
+		fill: $c43;
+	}
+}
+
+@media (max-width: 768px) {
+	.school__info-6-list {
+		strong {
+			font-size: fsz(18, 16);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.school__info-6-list {
+		li {
+			padding-left: 50px;
+
+			&+li {
+				margin-top: 31px;
+			}
+		}
+
+		strong {
+			font-size: fsz(16, 14);
+		}
+
+		svg {
+			top: -6px;
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.school__info-6-list {
+		li {
+			padding-left: 45px;
 		}
 	}
 }
