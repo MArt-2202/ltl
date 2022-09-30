@@ -650,8 +650,43 @@
 		margin-bottom: 20px;
 	}
 
+	ul {
+		margin-bottom: 0;
+
+		li {
+			position: relative;
+			padding-left: 15px;
+			font-family: $f1;
+			line-height: 1.55;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 9px;
+				left: 0;
+				width: 5px;
+				height: 5px;
+				background-color: $cb;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	ul+.order-form,
 	p+.order-form {
 		margin-top: 53px;
+	}
+}
+
+@media (max-width: 576px) {
+	.order {
+		ul {
+			li {
+				&:before {
+					top: 8px;
+				}
+			}
+		}
 	}
 }
 
