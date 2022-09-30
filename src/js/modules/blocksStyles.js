@@ -66,7 +66,7 @@ export default function blockStyles() {
 		document.querySelectorAll('.lazyload-map').forEach((item) => observer.observe(item));
 	}
 
-	if (document.querySelector('#video-list .video-wrapper')) {
+	if (document.querySelector('.video-list .video-wrapper')) {
 		const observer = new IntersectionObserver(
 			(entries, observer) => {
 				entries.forEach((entry) => {
@@ -88,7 +88,7 @@ export default function blockStyles() {
 			}
 		);
 		document
-			.querySelectorAll('#video-list .video-wrapper')
+			.querySelectorAll('.video-list .video-wrapper')
 			.forEach((item) => observer.observe(item));
 	}
 }
