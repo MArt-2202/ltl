@@ -59,6 +59,7 @@ window.addEventListener('resize', () => {
 	debounce(function () {
 		blockPosition();
 		teachersListStyles();
+		scrollToAnchor();
 	}, 200);
 });
 
@@ -70,5 +71,6 @@ window.addEventListener('load', () => {
 		blocksStyles();
 		blockPosition();
 		teachersListStyles();
+		scrollToAnchor();
 	}, 200);
 });
