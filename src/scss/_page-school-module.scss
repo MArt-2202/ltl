@@ -494,6 +494,12 @@
 		}
 	}
 
+	h2~p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
 	ul {
 		margin-bottom: 0;
 
