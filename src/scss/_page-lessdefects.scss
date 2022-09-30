@@ -167,6 +167,170 @@
 	}
 }
 
+.lessdefects__info-2 {
+	text-align: center;
+
+	h2 {
+		position: relative;
+		margin-bottom: 75px;
+		padding-top: 55px;
+		padding-bottom: 55px;
+		font-weight: 400;
+		border-top: 1px solid $cb;
+		border-bottom: 1px solid $cb;
+
+		span {
+			position: absolute;
+			top: -20px;
+			left: 50%;
+			transform: translateX(-50%);
+			text-transform: uppercase;
+			font-size: 1rem;
+			font-weight: 700;
+			line-height: 1;
+			letter-spacing: 2px;
+			color: $c1;
+			padding: 13px 15px 11px 15px;
+			background-color: $cb;
+		}
+	}
+}
+
+.lessdefects__info-2-content {
+	padding-top: 104px;
+	padding-bottom: 114px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: -moz-linear-gradient(top, rgba($cb, 0.4) 0%, rgba($cb, 0.8) 100%);
+		background: -webkit-linear-gradient(top, rgba($cb, 0.4) 0%, rgba($cb, 0.8) 100%);
+		background: linear-gradient(to bottom, rgba($cb, 0.4) 0%, rgba($cb, 0.8) 100%);
+	}
+}
+
+.lessdefects__info-2-list {
+	position: relative;
+	margin-bottom: 0;
+	z-index: 1;
+	color: $c1;
+
+	span {
+		display: block;
+		margin-bottom: 18px;
+		padding-bottom: 35px;
+		font-size: fsz(72, 16);
+		font-weight: 600;
+		line-height: 1.17;
+		border-bottom: 1px solid rgba($c1, 0.2);
+	}
+
+	p {
+		font-size: fsz(18, 16);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (min-width: 577px) {
+	.lessdefects__info-2 {
+		h2 {
+			span {
+				min-width: calc(min(200px, 100%));
+			}
+		}
+	}
+}
+
+@media (min-width: 769px) {
+	.lessdefects__info-2-list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 60px 40px;
+	}
+}
+
+@media (min-width: 1025px) {
+	.lessdefects__info-2-list {
+		p {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.lessdefects__info-2-content {
+		padding-top: 63px;
+		padding-bottom: 73px;
+	}
+
+	.lessdefects__info-2-list {
+		span {
+			font-size: fsz(60, 16);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.lessdefects__info-2-list {
+		li+li {
+			margin-top: 28px;
+		}
+
+		span {
+			margin-bottom: 15px;
+			padding-bottom: 12px;
+			font-size: fsz(45, 16);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.lessdefects__info-2 {
+
+		h2 {
+			margin-bottom: 35px;
+			padding-top: 25px;
+			padding-bottom: 23px;
+
+			span {
+				top: -15px;
+				padding-top: 9px;
+				padding-bottom: 8px;
+				font-size: fsz(12, 14);
+			}
+		}
+	}
+
+	.lessdefects__info-2-content {
+		padding-top: 54px;
+		padding-bottom: 54px;
+	}
+
+	.lessdefects__info-2-list {
+		li+li {
+			margin-top: 28px;
+		}
+
+		span {
+			margin-bottom: 7px;
+			padding-bottom: 7px;
+			font-size: fsz(35, 14);
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+}
+
 .lessdefects__info-3 {
 	background-color: $c21;
 
