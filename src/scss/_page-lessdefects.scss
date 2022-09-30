@@ -1,3 +1,172 @@
+.lessdefects__info-1 {
+	h2 {
+		text-align: center;
+	}
+}
+
+.lessdefects__info-1-list {
+	max-width: 760px;
+	margin: 0 auto;
+	counter-reset: num;
+
+	li {
+		position: relative;
+
+		&:not(:last-child) {
+			padding-bottom: 43px;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: 2px;
+				background-color: $c13;
+			}
+		}
+
+		&:before {
+			content: counter(num);
+			counter-increment: num;
+			position: absolute;
+			top: -4px;
+			z-index: 1;
+			width: 50px;
+			height: 50px;
+			font-size: fsz(20, 16);
+			font-weight: 600;
+			line-height: 46px;
+			color: $c1;
+			text-align: center;
+			background-color: $c13;
+			border: 2px solid $c1;
+			border-radius: 50%;
+		}
+	}
+
+	strong {
+		display: block;
+		margin-bottom: 11px;
+		font-size: fsz(22, 16);
+		font-weight: 600;
+		line-height: 1.35;
+	}
+
+	p {
+		font-size: fsz(15, 16);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (min-width: 769px) {
+	.lessdefects__info-1-list {
+		li {
+			&:nth-child(odd) {
+				padding-right: 50%;
+				text-align: right;
+
+				strong,
+				p {
+					padding-right: 55px;
+				}
+			}
+
+			&:nth-child(even) {
+				padding-left: 50%;
+
+				strong,
+				p {
+					padding-left: 55px;
+				}
+			}
+
+			&:not(:last-child) {
+				&:after {
+					left: 50%;
+				}
+			}
+
+			&:before {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.lessdefects__info-1-list {
+		li {
+			padding-left: 70px;
+
+			&:not(:last-child) {
+				&:after {
+					left: 24px;
+				}
+			}
+
+			&:before {
+				left: 0;
+			}
+		}
+
+		strong {
+			font-size: fsz(20, 16);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.lessdefects__info-1-list {
+		li {
+			padding-left: 50px;
+
+			&:not(:last-child) {
+				padding-bottom: 30px;
+
+				&:after {
+					left: 14px;
+				}
+			}
+
+			&:before {
+				width: 30px;
+				height: 30px;
+				font-size: 1rem;
+				line-height: 27px;
+			}
+		}
+
+		strong {
+			margin-bottom: 5px;
+			font-size: fsz(18, 14);
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.lessdefects__info-1-list {
+		strong {
+			font-size: fsz(16, 14);
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.lessdefects__info-1-list {
+		li {
+			padding-left: 45px;
+		}
+	}
+}
+
 .lessdefects__info-3 {
 	background-color: $c21;
 
