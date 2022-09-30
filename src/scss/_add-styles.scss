@@ -576,6 +576,18 @@
 	}
 }
 
+.btn-info-5 {
+	color: $cb;
+	border-color: $c1;
+	background-color: $c1;
+
+	&:hover {
+		color: $c1;
+		border-color: $c43;
+		background-color: $c43;
+	}
+}
+
 .btn-style-1 {
 	display: table;
 	margin-left: auto;
@@ -669,6 +681,16 @@
 .btn-style-10 {
 	padding-left: 60px;
 	padding-right: 60px;
+}
+
+.btn-style-11 {
+	height: 40px;
+	line-height: 40px;
+	padding: 0 30px;
+	font-size: fsz(14, 16);
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 20px;
 }
 
 @media (max-width: 576px) {
