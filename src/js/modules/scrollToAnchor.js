@@ -19,6 +19,25 @@ export default function scrollToAnchor() {
 			if (target !== null) {
 				let pos = target.offsetTop;
 
+				if (document.querySelector('.school__navbar .scroll-to-anchor')) {
+					pos = target.offsetTop - document.querySelector('.school__navbar').offsetHeight;
+
+					if (window.matchMedia('(max-width: 1024px)').matches) {
+						pos =
+							target.offsetTop - document.querySelector('.school__navbar').offsetHeight - 60;
+					}
+					if (window.matchMedia('(min-width: 1025px)').matches) {
+						pos = target.offsetTop - document.querySelector('.school__navbar').offsetHeight;
+					}
+
+					if (target === document.querySelector('#school__info-7')) {
+						pos =
+							target.offsetTop -
+							document.querySelector('.school__navbar').offsetHeight -
+							120;
+					}
+				}
+
 				window.scrollTo({
 					top: pos,
 					behavior: 'smooth',
