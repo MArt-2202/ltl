@@ -90,7 +90,7 @@
 	.school-navbar__nav {
 		li {
 			&:not(:last-child) {
-				margin-right: 30px;
+				margin-right: 16px;
 			}
 		}
 	}
@@ -944,6 +944,24 @@
 		height: 80px;
 		margin-bottom: 26px;
 		fill: currentColor;
+	}
+
+	&+.btn {
+		margin-top: 60px;
+	}
+}
+
+.school__info-7-style-1 {
+	background-color: initial;
+
+	&:after {
+		display: none;
+	}
+
+	.school__info-7-list {
+		strong {
+			text-transform: none;
+		}
 	}
 }
 
