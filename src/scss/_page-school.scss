@@ -369,6 +369,10 @@
 		padding-top: 75%;
 		cursor: zoom-in;
 	}
+
+	&+.btn {
+		margin-top: 60px;
+	}
 }
 
 @media (max-width: 1024px) {
