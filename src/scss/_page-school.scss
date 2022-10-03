@@ -247,6 +247,28 @@
 		line-height: 1;
 		color: $c34;
 	}
+
+	&+.btn {
+		margin-top: 60px;
+	}
+}
+
+.school__teachers-style-1 {
+	margin-top: 100px;
+	background-color: $c21;
+
+	.school__teachers-list strong,
+	.school__teachers-list span,
+	h2 {
+		color: $cb;
+	}
+
+	.school__teachers-list {
+		.list-img {
+			border-radius: 0;
+		}
+	}
+
 }
 
 @media (max-width: 1024px) {
