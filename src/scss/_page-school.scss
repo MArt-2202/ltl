@@ -318,6 +318,12 @@
 		margin-bottom: 35px;
 	}
 
+	.video-wrapper {
+		&+strong {
+			margin-top: 20px;
+		}
+	}
+
 	strong {
 		display: block;
 		font-size: fsz(24, 16);
