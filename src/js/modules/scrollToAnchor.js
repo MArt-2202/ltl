@@ -30,7 +30,11 @@ export default function scrollToAnchor() {
 						pos = target.offsetTop - document.querySelector('.school__navbar').offsetHeight;
 					}
 
-					if (target === document.querySelector('#school__info-7')) {
+					if (
+						(target === document.querySelector('#school__info-7') &&
+							!target.classList.contains('school__info-7-style-1')) ||
+						target === document.querySelector('#school__reviews')
+					) {
 						pos =
 							target.offsetTop -
 							document.querySelector('.school__navbar').offsetHeight -
