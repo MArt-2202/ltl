@@ -33,7 +33,8 @@ export default function scrollToAnchor() {
 					if (
 						(target === document.querySelector('#school__info-7') &&
 							!target.classList.contains('school__info-7-style-1')) ||
-						target === document.querySelector('#school__reviews')
+						target === document.querySelector('#school__reviews') ||
+						target === document.querySelector('#school__gallery')
 					) {
 						pos =
 							target.offsetTop -
