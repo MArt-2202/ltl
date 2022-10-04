@@ -753,6 +753,7 @@
 			line-height: 1.2;
 			color: $cb;
 
+			&.active,
 			&:hover {
 				color: $c41;
 				text-decoration: none;
