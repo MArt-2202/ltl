@@ -1222,3 +1222,111 @@
 		text-align: center;
 	}
 }
+
+.school__info-10 {
+	text-align: center;
+}
+
+.school__info-10-list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 28px 40px;
+	margin-bottom: 0;
+
+	strong,
+	span {
+		display: block;
+		font-size: fsz(40, 16);
+		line-height: 1;
+	}
+
+	strong {
+		font-weight: 700;
+	}
+
+	span {
+		margin-top: 9px;
+		margin-bottom: 20px;
+		padding-bottom: 24px;
+		border-bottom: 1px solid rgba($cb, 0.2);
+	}
+
+	p {
+		font-size: fsz(17, 16);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.school__info-10-list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.school__info-10-list {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 28px mp(40, 708);
+
+		strong,
+		span {
+			font-size: fsz(30, 16);
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.school__info-10-list {
+		gap: 33px 20px;
+
+		strong,
+		span {
+			font-size: fsz(25, 16);
+		}
+
+		span {
+			margin-top: 12px;
+			margin-bottom: 12px;
+			padding-bottom: 16px;
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.school__info-10-list {
+
+		strong,
+		span {
+			font-size: fsz(22, 16);
+		}
+
+		span {
+			margin-top: 7px;
+			margin-bottom: 7px;
+			padding-bottom: 11px;
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.school__info-10-list {
+
+		strong,
+		span {
+			font-size: fsz(20, 16);
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.school__info-10-list {
+		grid-template-columns: 1fr;
+	}
+}
