@@ -1225,6 +1225,10 @@
 
 .school__info-10 {
 	text-align: center;
+
+	.counter {
+		min-height: 40px;
+	}
 }
 
 .school__info-10-list {
@@ -1267,6 +1271,12 @@
 }
 
 @media (max-width: 768px) {
+	.school__info-10 {
+		.counter {
+			min-height: 30px;
+		}
+	}
+
 	.school__info-10-list {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 28px mp(40, 708);
@@ -1283,12 +1293,18 @@
 }
 
 @media (max-width: 576px) {
+	.school__info-10 {
+		.counter {
+			min-height: 25px;
+		}
+	}
+
 	.school__info-10-list {
 		gap: 33px 20px;
 
 		strong,
 		span {
-			font-size: fsz(25, 16);
+			font-size: fsz(25, 14);
 		}
 
 		span {
@@ -1300,11 +1316,17 @@
 }
 
 @media (max-width: 415px) {
+	.school__info-10 {
+		.counter {
+			min-height: 22px;
+		}
+	}
+
 	.school__info-10-list {
 
 		strong,
 		span {
-			font-size: fsz(22, 16);
+			font-size: fsz(22, 14);
 		}
 
 		span {
@@ -1316,11 +1338,17 @@
 }
 
 @media (max-width: 360px) {
+	.school__info-10 {
+		.counter {
+			min-height: 20px;
+		}
+	}
+
 	.school__info-10-list {
 
 		strong,
 		span {
-			font-size: fsz(20, 16);
+			font-size: fsz(20, 14);
 		}
 	}
 }
