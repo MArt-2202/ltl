@@ -14,6 +14,7 @@ import scrollToAnchor from './modules/scrollToAnchor';
 import tabs from './modules/tabs';
 import digitsCounter from './modules/digitsCounter';
 import mapIntersectionObserver from './modules/mapIntersectionObserver';
+import anchorNavStyles from './modules/anchorNavStyles';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	scrollToAnchor();
 	tabs({});
 	mapIntersectionObserver('#map-with-pins');
+	anchorNavStyles('.anchor-section', '.school-navbar__nav');
 	digitsCounter('.counter');
 }); // END READY
 
