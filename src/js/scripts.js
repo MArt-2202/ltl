@@ -12,6 +12,7 @@ import toggleContent from './modules/toggleContent';
 import masketInput from './modules/masketInput';
 import scrollToAnchor from './modules/scrollToAnchor';
 import tabs from './modules/tabs';
+import digitsCounter from './modules/digitsCounter';
 import mapIntersectionObserver from './modules/mapIntersectionObserver';
 
 if ('ontouchstart' in document.documentElement) {
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	scrollToAnchor();
 	tabs({});
 	mapIntersectionObserver('#map-with-pins');
+	digitsCounter('.counter');
 }); // END READY
 
 window.addEventListener('resize', () => {
