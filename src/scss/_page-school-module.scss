@@ -954,6 +954,10 @@
 .school__info-7-style-1 {
 	background-color: initial;
 
+	h2 {
+		text-align: center;
+	}
+
 	&:after {
 		display: none;
 	}
@@ -1206,5 +1210,15 @@
 			padding-left: 15px;
 			padding-right: 15px;
 		}
+	}
+}
+
+.school__info-9 {
+	background-color: $c39;
+	color: $c1;
+
+	h2 {
+		margin-bottom: 0;
+		text-align: center;
 	}
 }
