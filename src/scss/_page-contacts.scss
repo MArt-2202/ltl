@@ -60,6 +60,22 @@
 	}
 }
 
+.style-12+.contacts__list {
+	padding-top: 57px;
+}
+
+@media (max-width: 1024px) {
+	.style-12+.contacts__list {
+		padding-top: 38px;
+	}
+}
+
+@media (max-width: 576px) {
+	.style-12+.contacts__list {
+		padding-top: 20px;
+	}
+}
+
 .contacts__list {
 	margin-bottom: 60px;
 	font-size: fsz(20, 16);
