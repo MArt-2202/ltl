@@ -190,6 +190,23 @@
 	padding-bottom: 45px;
 }
 
+.style-12 {
+	display: table;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.style-13 {
+	font-size: fsz(24, 16);
+	font-weight: 400;
+	line-height: 1.25;
+}
+
+.style-14 {
+	margin-bottom: 10px;
+}
+
 @media (max-width: 1024px) {
 	.style-1 {
 		margin-bottom: 75px;
