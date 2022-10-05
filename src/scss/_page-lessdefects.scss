@@ -557,3 +557,41 @@
 		}
 	}
 }
+
+.lessdefects__info-6 {
+	h2 {
+		position: relative;
+		margin-bottom: 0;
+		padding-top: 46px;
+		padding-bottom: 46px;
+		text-align: center;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 140px;
+			height: 1px;
+			background-color: $cb;
+		}
+
+		&:before {
+			top: 0;
+		}
+
+		&:after {
+			bottom: 0;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.lessdefects__info-6 {
+		h2 {
+			padding-top: 34px;
+			padding-bottom: 32px;
+		}
+	}
+}
