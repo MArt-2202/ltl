@@ -527,6 +527,10 @@
 			background-color: $c1;
 		}
 	}
+
+	picture {
+		box-shadow: 0 0 15px 0 rgba($cb, 0.2);
+	}
 }
 
 @media (min-width: 769px) {
@@ -534,11 +538,21 @@
 		.container {
 			display: flex;
 			gap: 40px;
+			align-items: center;
 
 			>div {
 				width: 50%;
 				flex-grow: 1;
+
+				&:first-child {
+					text-align: center;
+				}
 			}
+		}
+
+		picture {
+			display: inline-block;
+			max-width: 50%;
 		}
 	}
 }
