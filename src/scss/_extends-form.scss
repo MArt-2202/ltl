@@ -68,7 +68,7 @@
 					display: none;
 					position: absolute;
 					left: 12px;
-					top: calc(100% - 3px);
+					top: calc(100% - 5px);
 					z-index: 1;
 					padding: 3px 4px 3px 22px;
 					font: fsz(13, 16) $f1;
@@ -105,7 +105,9 @@
 				}
 
 				&.required {
-					input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']) {
+
+					input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']),
+					textarea {
 						background-color: rgba($c24, 0.08);
 						border-color: rgba($c24, 0.25);
 					}
