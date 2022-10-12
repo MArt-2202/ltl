@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					msg: msg.value,
 				};
 
-				var data = new FormData();
+				let data = new FormData();
 				data.append('json', JSON.stringify(mas_form));
 
 				fetch('/s/send', {
