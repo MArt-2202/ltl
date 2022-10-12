@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					?.closest('.required-field')
 					.classList.remove('required');
 
-				console.log(name.value);
+				// console.log(name.value);
 			}
 			if (tel.value === '') {
 				document
@@ -79,18 +79,30 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 
 			if (name.value !== '' && tel.value !== '' && email.value !== '' && msg.value !== '') {
-				fetch('/s/send', options)
+				const mas_form = {
+					tel: tel.value,
+					name: name.value,
+					email: email.value,
+					msg: msg.value,
+				};
+
+				var data = new FormData();
+				data.append('json', JSON.stringify(mas_form));
+
+				fetch('/s/send', {
+					method: 'POST',
+					body: data,
+				})
 					.then((response) => {
-						if (!response.ok) {
-							throw new Error('Error response');
+						if (response.ok) {
+							document.querySelector('#form-form-result').classList.remove('dn');
 						}
-						return response.json();
 					})
 					.then((data) => {
 						console.log(data);
 					})
 					.catch((error) => {
-						console.error(error);
+						console.log(error);
 					});
 
 				if (document.querySelector('.res_form_support')) {
